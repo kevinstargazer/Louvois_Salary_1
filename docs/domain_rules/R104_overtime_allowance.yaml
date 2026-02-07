@@ -1,0 +1,28 @@
+rule_id: R104
+name: 超時勤務
+applies_to:
+  entity: employee
+  conditions:
+    - field: daily_hours
+      operator: '>'
+      value_ref: lookup_table.overtime.daily_standard_hours
+effect:
+  type: overtime_allowance
+  target: overtime_allowance
+  expression: max(daily_hours - daily_standard_hours, 0) * overtime_rate
+  parameters:
+    daily_standard_hours_ref: lookup_table.overtime.daily_standard_hours
+    overtime_rate_ref: lookup_table.overtime.overtime_rate
+priority: 230
+example:
+  input:
+    employee:
+      id: E006
+      name: Camille Laurent
+      daily_hours: 10
+    lookup_table:
+      overtime:
+        daily_standard_hours: 8
+        overtime_rate: 90
+  output:
+    overtime_allowance: 180

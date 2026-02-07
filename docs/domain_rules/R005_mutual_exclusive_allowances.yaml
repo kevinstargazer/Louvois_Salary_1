@@ -1,0 +1,33 @@
+rule_id: R005
+name: 雙職務擇優
+applies_to:
+  entity: employee
+  conditions:
+    - field_group: housing
+      fields: [housing_allowance, barracks_subsidy]
+      operator: mutual_exclusive
+    - field_group: transport
+      fields: [commute_allowance, official_vehicle_allowance]
+      operator: mutual_exclusive
+effect:
+  type: max_of_by_group
+  groups:
+    housing:
+      fields: [housing_allowance, barracks_subsidy]
+      result_field: selected_housing_allowance
+    transport:
+      fields: [commute_allowance, official_vehicle_allowance]
+      result_field: selected_transport_allowance
+priority: 140
+example:
+  input:
+    employee:
+      id: E015
+      name: Louis Lambert
+      housing_allowance: 1200
+      barracks_subsidy: 800
+      commute_allowance: 400
+      official_vehicle_allowance: 650
+  output:
+    selected_housing_allowance: 1200
+    selected_transport_allowance: 650

@@ -1,0 +1,33 @@
+rule_id: R001
+name: 基本薪資
+applies_to:
+  entity: employee
+  conditions:
+    - field: rank
+      operator: in
+      value:
+        - Private
+        - Corporal
+        - Sergeant
+        - Lieutenant
+        - Captain
+        - Major
+        - Colonel
+        - General
+effect:
+  type: table_lookup
+  target: base_salary
+  source_table_ref: lookup_table.base_salary_table
+  key_field: rank
+priority: 100
+example:
+  input:
+    employee:
+      id: E005
+      name: Luc Moreau
+      rank: Captain
+  lookup_table:
+    base_salary_table:
+      Captain: 3800
+  output:
+    base_salary: 3800

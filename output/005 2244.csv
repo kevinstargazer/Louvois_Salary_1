@@ -1,0 +1,32 @@
+id,name,rank,months_in_service,base_salary_raw,base_salary,seniority_allowance,total_base
+E001,Jean Dupont,Private,10,2000,2000,800.0,2800.0
+E002,Marie Leclerc,Corporal,4,2300,1840.0,110.4,1950.4
+E003,Pierre Martin,Sergeant,12,2600,2600,0,2600
+E004,Sophie Bernard,Lieutenant,1,3200,2560.0,800,3360.0
+E005,Luc Moreau,Captain,2,3800,3040.0,486.4,3526.4
+E006,Camille Laurent,Major,17,4500,4500,630.0,5130.0
+E007,Antoine Dubois,Colonel,3,5200,4160.0,582.4,4742.4
+E008,Julie Rousseau,General,11,6500,6500,520.0,7020.0
+E009,Thomas Petit,Private,18,2000,2000,800,2800
+E010,Claire Garnier,Corporal,1,2300,1840.0,110.4,1950.4
+E011,Hugo Faure,Sergeant,16,2600,2600,800,3400
+E012,Alice Girard,Lieutenant,6,3200,3200,800,4000
+E013,Nicolas Andre,Captain,1,3800,3040.0,800,3840.0
+E014,Emma Bonnet,Major,2,4500,3600.0,144.0,3744.0
+E015,Louis Lambert,Colonel,13,5200,5200,800,6000
+E016,Chloe Fontaine,General,13,6500,6500,800,7300
+E017,Gabriel Rousseau,Private,2,2000,1600.0,32.0,1632.0
+E018,Manon Perrot,Corporal,7,2300,2300,0,2300
+E019,Alexandre Blanchard,Sergeant,2,2600,2080.0,83.2,2163.2
+E020,Lea Perrin,Lieutenant,17,3200,3200,384.0,3584.0
+E021,Paul Leroy,Captain,13,3800,3800,532.0,4332.0
+E022,Sarah Colin,Major,1,4500,3600.0,800,4400.0
+E023,Julien Renard,Colonel,18,5200,5200,800,6000
+E024,Laura Vidal,General,3,6500,5200.0,0,5200.0
+E025,Maxime Renaud,Private,7,2000,2000,680.0,2680.0
+E026,Eva Marchand,Corporal,18,2300,2300,276.0,2576.0
+E027,Arthur Roy,Sergeant,1,2600,2080.0,800,2880.0
+E028,Nina Chevalier,Lieutenant,18,3200,3200,800,4000
+E029,Bastien Gauthier,Captain,18,3800,3800,800,4600
+E030,Ines Henry,Major,12,4500,4500,800,5300
+runtime_seconds=0.0007

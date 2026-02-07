@@ -1,0 +1,27 @@
+rule_id: R106
+name: 緊急召回
+applies_to:
+  entity: employee
+  conditions:
+    - field: call_back
+      operator: '='
+      value: true
+effect:
+  type: flat_per_event
+  target: call_back_allowance
+  expression: call_back_count * call_back_flat
+  parameters:
+    call_back_flat_ref: lookup_table.call_back.call_back_flat
+priority: 250
+example:
+  input:
+    employee:
+      id: E027
+      name: Arthur Roy
+      call_back: true
+      call_back_count: 2
+    lookup_table:
+      call_back:
+        call_back_flat: 300
+  output:
+    call_back_allowance: 600

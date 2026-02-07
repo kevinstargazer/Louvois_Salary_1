@@ -1,0 +1,33 @@
+rule_id: R108
+name: 訓練日津貼
+applies_to:
+  entity: employee
+  conditions:
+    - field: training_days
+      operator: '>'
+      value: 0
+    - field: hazard_zone_from_missions
+      operator: '='
+      value: false
+effect:
+  type: per_day_allowance
+  target: training_allowance
+  expression: training_days * training_day_allowance
+  parameters:
+    training_day_allowance_ref: lookup_table.training.training_day_allowance
+  exclusive_group: training_or_hazard
+notes:
+  - hazard 判定由 missions.hazard_zone 推導（依任務/單位關聯）
+priority: 270
+example:
+  input:
+    employee:
+      id: E011
+      name: Hugo Faure
+      training_days: 5
+      training_in_hazard_zone: false
+    lookup_table:
+      training:
+        training_day_allowance: 150
+  output:
+    training_allowance: 750

@@ -1,0 +1,27 @@
+rule_id: R205
+name: 海外艦艇勤務
+applies_to:
+  entity: mission
+  conditions:
+    - field: sea_days
+      operator: '>='
+      value_ref: lookup_table.sea_duty.sea_days_threshold
+effect:
+  type: per_day_allowance
+  target: sea_duty_allowance
+  expression: sea_days * sea_duty_bonus_per_day
+  parameters:
+    sea_duty_bonus_per_day_ref: lookup_table.sea_duty.sea_duty_bonus_per_day
+priority: 340
+example:
+  input:
+    mission:
+      id: M007
+      unit: U010
+      sea_days: 12
+    lookup_table:
+      sea_duty:
+        sea_days_threshold: 7
+        sea_duty_bonus_per_day: 110
+  output:
+    sea_duty_allowance: 1320

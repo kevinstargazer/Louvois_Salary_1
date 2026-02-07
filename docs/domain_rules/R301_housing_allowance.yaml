@@ -1,0 +1,31 @@
+rule_id: R301
+name: 住宿補貼
+applies_to:
+  entity: employee
+  conditions:
+    - field: barracks_provided
+      operator: '='
+      value: false
+effect:
+  type: table_lookup
+  target: housing_allowance
+  expression: housing_allowance_table[rank, city]
+  parameters:
+    housing_allowance_table_ref: lookup_table.housing_allowance_table
+    city_ref: units.location
+priority: 400
+example:
+  input:
+    employee:
+      id: E001
+      rank: Captain
+      unit: U001
+    unit:
+      location: Paris
+      barracks_provided: false
+    lookup_table:
+      housing_allowance_table:
+        Paris:
+          Captain: 900
+  output:
+    housing_allowance: 900

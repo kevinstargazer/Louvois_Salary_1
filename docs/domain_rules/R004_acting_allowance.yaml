@@ -1,0 +1,27 @@
+rule_id: R004
+name: 代理職務加給
+applies_to:
+  entity: employee
+  conditions:
+    - field: acting_days
+      operator: '>'
+      value_ref: lookup_table.acting_allowance.n
+effect:
+  type: formula
+  target: acting_allowance
+  expression: acting_days * acting_allowance_per_day
+  parameters:
+    acting_allowance_per_day_ref: lookup_table.acting_allowance.acting_allowance_per_day
+priority: 130
+example:
+  input:
+    employee:
+      id: E012
+      name: Julie Rousseau
+      acting_days: 12
+    lookup_table:
+      acting_allowance:
+        n: 7
+        acting_allowance_per_day: 120
+  output:
+    acting_allowance: 1440

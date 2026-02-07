@@ -1,0 +1,30 @@
+rule_id: R202
+name: 國外派遣日支
+applies_to:
+  entity: mission
+  conditions:
+    - field: trip_days
+      operator: '>'
+      value: 0
+    - field: country_city
+      operator: exists
+effect:
+  type: per_diem_international
+  target: per_diem_international
+  expression: trip_days * per_diem_international[country_city] * exchange_rate
+  parameters:
+    per_diem_international_ref: lookup_table.per_diem_international
+priority: 310
+example:
+  input:
+    mission:
+      id: M010
+      unit: U014
+      country_city: Tokyo
+      trip_days: 8
+      exchange_rate: 1.12
+    lookup_table:
+      per_diem_international:
+        Tokyo: 220
+  output:
+    per_diem_international: 1971.20

@@ -1,0 +1,132 @@
+{
+  "base_salary_table": {
+    "Private": 2000,
+    "Corporal": 2300,
+    "Sergeant": 2600,
+    "Lieutenant": 3200,
+    "Captain": 3800,
+    "Major": 4500,
+    "Colonel": 5200,
+    "General": 6500
+  },
+  "acting_allowance": {
+    "n": 7,
+    "acting_allowance_per_day": 120
+  },
+  "seniority_allowance": {
+    "seniority_rate": 0.02,
+    "seniority_cap": 800
+  },
+  "probation": {
+    "probation_months": 6,
+    "probation_factor": 0.8
+  },
+  "payroll_period": {
+    "days_in_month": 31
+  },
+  "night_allowance": {
+    "night_rate": 60
+  },
+  "allowance_definitions": {
+    "housing_allowance": {
+      "name": "Housing Allowance",
+      "type": "flat",
+      "exclusive_group": "housing"
+    },
+    "barracks_subsidy": {
+      "name": "Barracks Subsidy",
+      "type": "flat",
+      "exclusive_group": "housing"
+    },
+    "commute_allowance": {
+      "name": "Commute Allowance",
+      "type": "flat",
+      "exclusive_group": "transport"
+    },
+    "official_vehicle_allowance": {
+      "name": "Official Vehicle Allowance",
+      "type": "flat",
+      "exclusive_group": "transport"
+    }
+  },
+  "weekend_allowance": {
+    "weekend_rate": 80,
+    "combine_with_night": "stack"
+  },
+  "holiday_allowance": {
+    "holiday_rate": 120
+  },
+  "overtime": {
+    "daily_standard_hours": 8,
+    "overtime_rate": 90
+  },
+  "fatigue": {
+    "streak_threshold": 7,
+    "fatigue_multiplier": 1.2
+  },
+  "call_back": {
+    "call_back_flat": 300
+  },
+  "standby": {
+    "standby_rate": 45
+  },
+  "training": {
+    "training_day_allowance": 150
+  },
+  "per_diem_domestic": {
+    "A": 120,
+    "B": 100,
+    "C": 80
+  },
+  "per_diem_international": {
+    "Tokyo": 220,
+    "Seoul": 180,
+    "Berlin": 200,
+    "London": 230,
+    "New York": 250
+  },
+  "hazard": {
+    "hazard_rate": 0.03,
+    "hazard_flat": 150
+  },
+  "combat": {
+    "combat_allowance": 500,
+    "combat_cap": 5000
+  },
+  "sea_duty": {
+    "sea_days_threshold": 7,
+    "sea_duty_bonus_per_day": 110
+  },
+  "joint_mission": {
+    "joint_mission_bonus": 600
+  },
+  "prepaid": {
+    "default_prepaid_amount": 0
+  },
+  "cancel": {
+    "cancel_threshold_hours": 24,
+    "cancel_compensation_flat": 400
+  },
+  "housing_allowance_table": {
+    "Paris": {
+      "Private": 600,
+      "Corporal": 650,
+      "Sergeant": 700,
+      "Lieutenant": 800,
+      "Captain": 900,
+      "Major": 1000,
+      "Colonel": 1100,
+      "General": 1300
+    },
+    "Lyon": {
+      "Private": 500,
+      "Corporal": 550,
+      "Sergeant": 600,
+      "Lieutenant": 700,
+      "Captain": 800,
+      "Major": 900,
+      "Colonel": 1000,
+      "General": 1200
+    }
+  }
+}

@@ -1,0 +1,30 @@
+rule_id: R107
+name: 待命津貼
+applies_to:
+  entity: employee
+  conditions:
+    - field: standby_hours
+      operator: '>'
+      value: 0
+    - field: called_in
+      operator: '='
+      value: false
+effect:
+  type: per_hour_allowance
+  target: standby_allowance
+  expression: standby_hours * standby_rate
+  parameters:
+    standby_rate_ref: lookup_table.standby.standby_rate
+priority: 260
+example:
+  input:
+    employee:
+      id: E009
+      name: Claire Garnier
+      standby_hours: 10
+      called_in: false
+    lookup_table:
+      standby:
+        standby_rate: 45
+  output:
+    standby_allowance: 450

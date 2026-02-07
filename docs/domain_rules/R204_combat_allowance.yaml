@@ -1,0 +1,37 @@
+rule_id: R204
+name: 戰鬥任務加給
+applies_to:
+  entity: mission
+  conditions:
+    - field: mission_type
+      operator: '='
+      value: combat
+    - field: trip_days
+      operator: '>'
+      value: 0
+effect:
+  type: combat_allowance
+  target: combat_allowance
+  expression: combat_allowance
+  parameters:
+    combat_allowance_ref: lookup_table.combat.combat_allowance
+    combat_cap_ref: lookup_table.combat.combat_cap
+  combination:
+    with: hazard_allowance
+    cap_rule: combined_cap
+priority: 330
+example:
+  input:
+    mission:
+      id: M004
+      unit: U011
+      mission_type: combat
+      trip_days: 12
+    allowances:
+      hazard_allowance: 900
+    lookup_table:
+      combat:
+        combat_allowance: 500
+        combat_cap: 5000
+  output:
+    combat_allowance: 500

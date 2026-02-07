@@ -1,0 +1,32 @@
+rule_id: R201
+name: 國內出差日支
+applies_to:
+  entity: mission
+  conditions:
+    - field: trip_days
+      operator: '>'
+      value: 0
+    - field: domestic_zone
+      operator: in
+      value: [A, B, C]
+effect:
+  type: per_diem
+  target: per_diem_domestic
+  expression: trip_days * per_diem_domestic[domestic_zone]
+  parameters:
+    per_diem_domestic_ref: lookup_table.per_diem_domestic
+priority: 300
+example:
+  input:
+    mission:
+      id: M003
+      unit: U007
+      domestic_zone: B
+      trip_days: 10
+    lookup_table:
+      per_diem_domestic:
+        A: 120
+        B: 100
+        C: 80
+  output:
+    per_diem_domestic: 1000

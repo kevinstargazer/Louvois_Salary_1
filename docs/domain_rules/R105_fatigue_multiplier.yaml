@@ -1,0 +1,38 @@
+rule_id: R105
+name: 連續勤務疲勞加成
+applies_to:
+  entity: employee
+  conditions:
+    - field: streak_days
+      operator: '>='
+      value_ref: lookup_table.fatigue.streak_threshold
+effect:
+  type: multiplier
+  target: duty_allowances
+  applies_to:
+    - night_allowance
+    - weekend_allowance
+    - holiday_allowance
+    - overtime_allowance
+  multiplier_ref: lookup_table.fatigue.fatigue_multiplier
+priority: 240
+example:
+  input:
+    employee:
+      id: E024
+      name: Julien Renard
+      streak_days: 9
+    allowances:
+      night_allowance: 300
+      weekend_allowance: 160
+      holiday_allowance: 0
+      overtime_allowance: 180
+    lookup_table:
+      fatigue:
+        streak_threshold: 7
+        fatigue_multiplier: 1.2
+  output:
+    night_allowance: 360
+    weekend_allowance: 192
+    holiday_allowance: 0
+    overtime_allowance: 216

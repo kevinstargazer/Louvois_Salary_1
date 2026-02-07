@@ -1,0 +1,34 @@
+rule_id: R203
+name: 戰區危險加給
+applies_to:
+  entity: mission
+  conditions:
+    - field: hazard_zone
+      operator: '='
+      value: true
+    - field: trip_days
+      operator: '>'
+      value: 0
+effect:
+  type: hazard_allowance
+  target: hazard_allowance
+  expression: max(base_salary * hazard_rate, hazard_flat) * trip_days
+  parameters:
+    hazard_rate_ref: lookup_table.hazard.hazard_rate
+    hazard_flat_ref: lookup_table.hazard.hazard_flat
+priority: 320
+example:
+  input:
+    mission:
+      id: M006
+      unit: U003
+      hazard_zone: true
+      trip_days: 10
+    employee:
+      base_salary: 3200
+    lookup_table:
+      hazard:
+        hazard_rate: 0.03
+        hazard_flat: 150
+  output:
+    hazard_allowance: 1500

@@ -1,0 +1,26 @@
+rule_id: R003
+name: 試用期折減
+applies_to:
+  entity: employee
+  conditions:
+    - field: months_in_service
+      operator: '<'
+      value_ref: lookup_table.probation.probation_months
+    - field: base_salary_raw
+      operator: '>'
+      value: 0
+effect:
+  type: factor
+  target: base_salary
+  source: base_salary_raw
+  factor_ref: lookup_table.probation.probation_factor
+priority: 120
+example:
+  input:
+    employee:
+      id: E003
+      name: Pierre Martin
+      months_in_service: 4
+    base_salary_raw: 2600
+  output:
+    base_salary: 2080

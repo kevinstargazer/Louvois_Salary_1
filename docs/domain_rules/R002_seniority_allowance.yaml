@@ -1,0 +1,26 @@
+rule_id: R002
+name: 年資加給
+applies_to:
+  entity: employee
+  conditions:
+    - field: seniority_years
+      operator: '>'
+      value: 0
+effect:
+  type: formula
+  target: seniority_allowance
+  expression: base_salary * seniority_rate * seniority_years
+  parameters:
+    seniority_rate_ref: lookup_table.seniority_allowance.seniority_rate
+  caps:
+    max_ref: lookup_table.seniority_allowance.seniority_cap
+priority: 110
+example:
+  input:
+    employee:
+      id: E010
+      name: Claire Garnier
+      seniority_years: 12
+    base_salary: 3200
+  output:
+    seniority_allowance: 768

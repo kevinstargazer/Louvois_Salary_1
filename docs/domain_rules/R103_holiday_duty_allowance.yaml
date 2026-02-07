@@ -1,0 +1,26 @@
+rule_id: R103
+name: 國定假日勤務
+applies_to:
+  entity: employee
+  conditions:
+    - field: holiday_hours
+      operator: '>'
+      value: 0
+effect:
+  type: per_hour_allowance
+  target: holiday_allowance
+  expression: holiday_hours * holiday_rate
+  parameters:
+    holiday_rate_ref: lookup_table.holiday_allowance.holiday_rate
+priority: 220
+example:
+  input:
+    employee:
+      id: E002
+      name: Marie Leclerc
+      holiday_hours: 5
+    lookup_table:
+      holiday_allowance:
+        holiday_rate: 120
+  output:
+    holiday_allowance: 600

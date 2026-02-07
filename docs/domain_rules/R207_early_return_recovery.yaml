@@ -1,0 +1,27 @@
+rule_id: R207
+name: 任務提前結束
+applies_to:
+  entity: mission
+  conditions:
+    - field: actual_days
+      operator: '<'
+      value_field: planned_days
+effect:
+  type: recovery
+  target: per_diem_recovery
+  expression: prepaid_amount
+  parameters:
+    prepaid_amount_ref: lookup_table.prepaid.default_prepaid_amount
+priority: 360
+example:
+  input:
+    mission:
+      id: M012
+      unit: U020
+      planned_days: 20
+      actual_days: 16
+    lookup_table:
+      prepaid:
+        default_prepaid_amount: 0
+  output:
+    per_diem_recovery: 0

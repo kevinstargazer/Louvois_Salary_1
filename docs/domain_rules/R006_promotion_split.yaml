@@ -1,0 +1,35 @@
+rule_id: R006
+name: 升階當月切分
+applies_to:
+  entity: employee
+  conditions:
+    - field: promotion_date
+      operator: exists
+    - field: new_rank
+      operator: exists
+effect:
+  type: pro_rate_by_day
+  target: base_salary_raw
+  inputs:
+    old_rank_field: rank
+    new_rank_field: new_rank
+    promotion_date_field: promotion_date
+    days_in_month_ref: lookup_table.payroll_period.days_in_month
+  formula: old_salary * old_days / days_in_month + new_salary * new_days / days_in_month
+priority: 150
+example:
+  input:
+    employee:
+      id: E008
+      name: Thomas Petit
+      rank: Lieutenant
+      new_rank: Captain
+      promotion_date: 2026-01-16
+    lookup_table:
+      payroll_period:
+        days_in_month: 31
+    base_salary_table:
+      Lieutenant: 3200
+      Captain: 3800
+  output:
+    base_salary_raw: 3516.13

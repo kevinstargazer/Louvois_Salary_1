@@ -1,0 +1,27 @@
+rule_id: R208
+name: 任務取消補償
+applies_to:
+  entity: mission
+  conditions:
+    - field: cancel_hours_before
+      operator: '<='
+      value_ref: lookup_table.cancel.cancel_threshold_hours
+effect:
+  type: flat_compensation
+  target: cancel_compensation
+  expression: cancel_compensation_flat
+  parameters:
+    cancel_compensation_flat_ref: lookup_table.cancel.cancel_compensation_flat
+priority: 370
+example:
+  input:
+    mission:
+      id: M015
+      unit: U022
+      cancel_hours_before: 12
+    lookup_table:
+      cancel:
+        cancel_threshold_hours: 24
+        cancel_compensation_flat: 400
+  output:
+    cancel_compensation: 400

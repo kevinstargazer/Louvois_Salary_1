@@ -1,0 +1,26 @@
+rule_id: R101
+name: 夜間勤務津貼
+applies_to:
+  entity: employee
+  conditions:
+    - field: night_hours
+      operator: '>'
+      value: 0
+effect:
+  type: per_hour_allowance
+  target: night_allowance
+  expression: night_hours * night_rate
+  parameters:
+    night_rate_ref: lookup_table.night_allowance.night_rate
+priority: 200
+example:
+  input:
+    employee:
+      id: E021
+      name: Paul Leroy
+      night_hours: 12
+    lookup_table:
+      night_allowance:
+        night_rate: 60
+  output:
+    night_allowance: 720

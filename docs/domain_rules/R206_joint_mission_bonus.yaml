@@ -1,0 +1,26 @@
+rule_id: R206
+name: 外交代表/聯合任務
+applies_to:
+  entity: mission
+  conditions:
+    - field: joint_mission
+      operator: '='
+      value: true
+effect:
+  type: flat_bonus
+  target: joint_mission_bonus
+  expression: joint_mission_bonus
+  parameters:
+    joint_mission_bonus_ref: lookup_table.joint_mission.joint_mission_bonus
+priority: 350
+example:
+  input:
+    mission:
+      id: M009
+      unit: U029
+      joint_mission: true
+    lookup_table:
+      joint_mission:
+        joint_mission_bonus: 600
+  output:
+    joint_mission_bonus: 600
