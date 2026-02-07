@@ -108,7 +108,7 @@
     "cancel_compensation_flat": 400
   },
   "housing_allowance_table": {
-    "Paris": {
+    "Hyères": {
       "Private": 600,
       "Corporal": 650,
       "Sergeant": 700,
@@ -118,7 +118,47 @@
       "Colonel": 1100,
       "General": 1300
     },
-    "Lyon": {
+    "Lille": {
+      "Private": 600,
+      "Corporal": 650,
+      "Sergeant": 700,
+      "Lieutenant": 800,
+      "Captain": 900,
+      "Major": 1000,
+      "Colonel": 1100,
+      "General": 1300
+    },
+    "Rennes": {
+      "Private": 600,
+      "Corporal": 650,
+      "Sergeant": 700,
+      "Lieutenant": 800,
+      "Captain": 900,
+      "Major": 1000,
+      "Colonel": 1100,
+      "General": 1300
+    },
+    "Toulon": {
+      "Private": 500,
+      "Corporal": 550,
+      "Sergeant": 600,
+      "Lieutenant": 700,
+      "Captain": 800,
+      "Major": 900,
+      "Colonel": 1000,
+      "General": 1200
+    },
+    "Metz": {
+      "Private": 500,
+      "Corporal": 550,
+      "Sergeant": 600,
+      "Lieutenant": 700,
+      "Captain": 800,
+      "Major": 900,
+      "Colonel": 1000,
+      "General": 1200
+    },
+    "Le Havre": {
       "Private": 500,
       "Corporal": 550,
       "Sergeant": 600,
@@ -128,5 +168,7 @@
       "Colonel": 1000,
       "General": 1200
     }
-  }
+  },
+  "barracks_fee": 300,
+  "meal_deduction": 120
 }

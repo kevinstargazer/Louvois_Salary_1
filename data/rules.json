@@ -1,8 +1,8 @@
 [
   {
     "id": "R001",
-    "name": "\u57fa\u672c\u85aa\u8cc7",
-    "category": "A. \u57fa\u672c\u85aa\u8cc7\u8207\u8077\u7b49",
+    "name": "基本薪資",
+    "category": "A. 基本薪資與職等",
     "priority": 100,
     "conditions": {
       "rank_in": [
@@ -25,12 +25,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u4f9d\u8ecd\u968e/\u8077\u7b49\u5c0d\u61c9 base_salary_table"
+    "notes": "依軍階/職等對應 base_salary_table"
   },
   {
     "id": "R002",
-    "name": "\u5e74\u8cc7\u52a0\u7d66",
-    "category": "A. \u57fa\u672c\u85aa\u8cc7\u8207\u8077\u7b49",
+    "name": "年資加給",
+    "category": "A. 基本薪資與職等",
     "priority": 110,
     "conditions": {
       "seniority_years_gt": 0
@@ -49,12 +49,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u6bcf\u6eff 1 \u5e74\u5e74\u8cc7\uff0c\u52a0\u7d66 base_salary * seniority_rate\uff0c\u5c01\u9802 seniority_cap"
+    "notes": "每滿 1 年年資，加給 base_salary * seniority_rate，封頂 seniority_cap"
   },
   {
     "id": "R003",
-    "name": "\u8a66\u7528\u671f\u6298\u6e1b",
-    "category": "A. \u57fa\u672c\u85aa\u8cc7\u8207\u8077\u7b49",
+    "name": "試用期折減",
+    "category": "A. 基本薪資與職等",
     "priority": 120,
     "conditions": {
       "months_in_service_lt": 6
@@ -68,12 +68,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u4efb\u5b98\u672a\u6eff probation_months\uff0c\u57fa\u672c\u85aa\u8cc7\u4e58\u4ee5 probation_factor"
+    "notes": "任官未滿 probation_months，基本薪資乘以 probation_factor"
   },
   {
     "id": "R004",
-    "name": "\u4ee3\u7406\u8077\u52d9\u52a0\u7d66",
-    "category": "A. \u57fa\u672c\u85aa\u8cc7\u8207\u8077\u7b49",
+    "name": "代理職務加給",
+    "category": "A. 基本薪資與職等",
     "priority": 130,
     "conditions": {
       "acting_days_gt": "n"
@@ -86,12 +86,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u4ee3\u7406\u9ad8\u4e00\u7d1a\u8077\u52d9\u8d85\u904e n \u5929\uff0c\u6309\u65e5\u52a0\u7d66 acting_allowance_per_day"
+    "notes": "代理高一級職務超過 n 天，按日加給 acting_allowance_per_day"
   },
   {
     "id": "R005",
-    "name": "\u96d9\u8077\u52d9\u64c7\u512a",
-    "category": "A. \u57fa\u672c\u85aa\u8cc7\u8207\u8077\u7b49",
+    "name": "雙職務擇優",
+    "category": "A. 基本薪資與職等",
     "priority": 140,
     "conditions": {
       "mutual_exclusive": true,
@@ -133,12 +133,12 @@
     "floors": null,
     "exclusive_group": "housing,transport",
     "effective_date_range": null,
-    "notes": "\u4e92\u65a5\u6d25\u8cbc\u64c7\u512a\uff1ahousing_allowance vs barracks_subsidy\uff1bcommute_allowance vs official_vehicle_allowance"
+    "notes": "互斥津貼擇優：housing_allowance vs barracks_subsidy；commute_allowance vs official_vehicle_allowance"
   },
   {
     "id": "R006",
-    "name": "\u5347\u968e\u7576\u6708\u5207\u5206",
-    "category": "A. \u57fa\u672c\u85aa\u8cc7\u8207\u8077\u7b49",
+    "name": "升階當月切分",
+    "category": "A. 基本薪資與職等",
     "priority": 150,
     "conditions": {
       "promotion_date_exists": true,
@@ -159,12 +159,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u5347\u968e\u65e5\u524d\u6309\u820a\u968e\u3001\u4e4b\u5f8c\u6309\u65b0\u968e\uff0c\u6309\u5929\u6bd4\u4f8b\u62c6\u5206"
+    "notes": "升階日前按舊階、之後按新階，按天比例拆分"
   },
   {
     "id": "R101",
-    "name": "\u591c\u9593\u52e4\u52d9\u6d25\u8cbc",
-    "category": "B. \u51fa\u52e4\u8207\u5de5\u6642",
+    "name": "夜間勤務津貼",
+    "category": "B. 出勤與工時",
     "priority": 200,
     "conditions": {
       "night_hours_gt": 0
@@ -181,12 +181,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u591c\u9593\u6642\u6bb5\u6bcf\u5c0f\u6642 night_rate"
+    "notes": "夜間時段每小時 night_rate"
   },
   {
     "id": "R102",
-    "name": "\u9031\u672b\u52e4\u52d9\u6d25\u8cbc",
-    "category": "B. \u51fa\u52e4\u8207\u5de5\u6642",
+    "name": "週末勤務津貼",
+    "category": "B. 出勤與工時",
     "priority": 210,
     "conditions": {
       "weekend_hours_gt": 0
@@ -204,12 +204,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u9031\u672b\u52e4\u52d9\u6bcf\u5c0f\u6642 weekend_rate\uff0c\u53ef\u8207\u591c\u9593\u758a\u52a0\u6216\u64c7\u9ad8"
+    "notes": "週末勤務每小時 weekend_rate，可與夜間疊加或擇高"
   },
   {
     "id": "R103",
-    "name": "\u570b\u5b9a\u5047\u65e5\u52e4\u52d9",
-    "category": "B. \u51fa\u52e4\u8207\u5de5\u6642",
+    "name": "國定假日勤務",
+    "category": "B. 出勤與工時",
     "priority": 220,
     "conditions": {
       "holiday_hours_gt": 0
@@ -226,12 +226,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u570b\u5b9a\u5047\u65e5\u52e4\u52d9\u6bcf\u5c0f\u6642 holiday_rate"
+    "notes": "國定假日勤務每小時 holiday_rate"
   },
   {
     "id": "R104",
-    "name": "\u8d85\u6642\u52e4\u52d9",
-    "category": "B. \u51fa\u52e4\u8207\u5de5\u6642",
+    "name": "超時勤務",
+    "category": "B. 出勤與工時",
     "priority": 230,
     "conditions": {
       "daily_hours_gt": "daily_standard_hours"
@@ -249,12 +249,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u55ae\u65e5\u8d85\u904e\u6a19\u6e96\u5de5\u6642\u90e8\u5206\u4ee5 overtime_rate \u8a08"
+    "notes": "單日超過標準工時部分以 overtime_rate 計"
   },
   {
     "id": "R105",
-    "name": "\u9023\u7e8c\u52e4\u52d9\u75b2\u52de\u52a0\u6210",
-    "category": "B. \u51fa\u52e4\u8207\u5de5\u6642",
+    "name": "連續勤務疲勞加成",
+    "category": "B. 出勤與工時",
     "priority": 240,
     "conditions": {
       "streak_days_gte": "streak_threshold"
@@ -272,12 +272,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u9023\u7e8c\u52e4\u52d9\u5929\u6578\u9054\u9580\u6abb\uff0c\u5f8c\u7e8c\u6d25\u8cbc\u4e58\u4ee5 fatigue_multiplier"
+    "notes": "連續勤務天數達門檻，後續津貼乘以 fatigue_multiplier"
   },
   {
     "id": "R106",
-    "name": "\u7dca\u6025\u53ec\u56de",
-    "category": "B. \u51fa\u52e4\u8207\u5de5\u6642",
+    "name": "緊急召回",
+    "category": "B. 出勤與工時",
     "priority": 250,
     "conditions": {
       "call_back_is_true": true
@@ -294,12 +294,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u975e\u52e4\u52d9\u6642\u9593\u88ab\u53ec\u56de\uff0c\u56fa\u5b9a\u88dc\u8cbc call_back_flat\uff08\u8eca\u99ac\u8cbb\u53e6\u8a08\uff09"
+    "notes": "非勤務時間被召回，固定補貼 call_back_flat（車馬費另計）"
   },
   {
     "id": "R107",
-    "name": "\u5f85\u547d\u6d25\u8cbc",
-    "category": "B. \u51fa\u52e4\u8207\u5de5\u6642",
+    "name": "待命津貼",
+    "category": "B. 出勤與工時",
     "priority": 260,
     "conditions": {
       "standby_hours_gt": 0,
@@ -318,12 +318,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u5f85\u547d\u6bcf\u5c0f\u6642 standby_rate\uff1b\u82e5\u5be6\u969b\u51fa\u52e4\u5247\u505c\u6b62\u5f85\u547d\u8a08\u7b97"
+    "notes": "待命每小時 standby_rate；若實際出勤則停止待命計算"
   },
   {
     "id": "R108",
-    "name": "\u8a13\u7df4\u65e5\u6d25\u8cbc",
-    "category": "B. \u51fa\u52e4\u8207\u5de5\u6642",
+    "name": "訓練日津貼",
+    "category": "B. 出勤與工時",
     "priority": 270,
     "conditions": {
       "training_days_gt": 0,
@@ -342,12 +342,12 @@
     "floors": null,
     "exclusive_group": "training_or_hazard",
     "effective_date_range": null,
-    "notes": "\u8a13\u7df4\u65e5\u5728\u975e\u6230\u5340\u6642\u7d66\u4ed8\uff1b\u6230\u5340\u7531 missions.hazard_zone \u63a8\u5c0e"
+    "notes": "訓練日在非戰區時給付；戰區由 missions.hazard_zone 推導"
   },
   {
     "id": "R201",
-    "name": "\u570b\u5167\u51fa\u5dee\u65e5\u652f",
-    "category": "C. \u6d3e\u9063\u8207\u4efb\u52d9",
+    "name": "國內出差日支",
+    "category": "C. 派遣與任務",
     "priority": 300,
     "conditions": {
       "trip_days_gt": 0,
@@ -370,12 +370,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u4f9d\u5730\u5340\u7d1a\u8ddd\u7d66\u65e5\u652f per_diem_domestic"
+    "notes": "依地區級距給日支 per_diem_domestic"
   },
   {
     "id": "R202",
-    "name": "\u570b\u5916\u6d3e\u9063\u65e5\u652f",
-    "category": "C. \u6d3e\u9063\u8207\u4efb\u52d9",
+    "name": "國外派遣日支",
+    "category": "C. 派遣與任務",
     "priority": 310,
     "conditions": {
       "trip_days_gt": 0,
@@ -395,12 +395,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u570b\u5916\u6d3e\u9063\u65e5\u652f\u4f9d\u57ce\u5e02\u7d66\u4ed8\u4e26\u4e58\u532f\u7387"
+    "notes": "國外派遣日支依城市給付並乘匯率"
   },
   {
     "id": "R203",
-    "name": "\u6230\u5340\u5371\u96aa\u52a0\u7d66",
-    "category": "C. \u6d3e\u9063\u8207\u4efb\u52d9",
+    "name": "戰區危險加給",
+    "category": "C. 派遣與任務",
     "priority": 320,
     "conditions": {
       "hazard_zone_is_true": true,
@@ -420,12 +420,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u6230\u5340\u5371\u96aa\u52a0\u7d66\uff1a\u6bcf\u65e5\u672c\u85aa * hazard_rate \u6216\u56fa\u5b9a\u984d hazard_flat\uff08\u4e8c\u9078\u4e00\uff09"
+    "notes": "戰區危險加給：每日本薪 * hazard_rate 或固定額 hazard_flat（二選一）"
   },
   {
     "id": "R204",
-    "name": "\u6230\u9b25\u4efb\u52d9\u52a0\u7d66",
-    "category": "C. \u6d3e\u9063\u8207\u4efb\u52d9",
+    "name": "戰鬥任務加給",
+    "category": "C. 派遣與任務",
     "priority": 330,
     "conditions": {
       "mission_type_eq": "combat",
@@ -444,12 +444,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u6230\u9b25\u4efb\u52d9\u52a0\u7d66\uff0c\u53ef\u8207\u6230\u5340\u758a\u52a0\u4f46\u5c01\u9802 combat_cap"
+    "notes": "戰鬥任務加給，可與戰區疊加但封頂 combat_cap"
   },
   {
     "id": "R205",
-    "name": "\u6d77\u5916\u8266\u8247\u52e4\u52d9",
-    "category": "C. \u6d3e\u9063\u8207\u4efb\u52d9",
+    "name": "海外艦艇勤務",
+    "category": "C. 派遣與任務",
     "priority": 340,
     "conditions": {
       "sea_days_gte": "sea_days_threshold"
@@ -467,12 +467,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u6d77\u4e0a\u9023\u7e8c\u52e4\u52d9\u9054\u9580\u6abb\u7d66\u4ed8\u984d\u5916\u52a0\u7d66"
+    "notes": "海上連續勤務達門檻給付額外加給"
   },
   {
     "id": "R206",
-    "name": "\u5916\u4ea4\u4ee3\u8868/\u806f\u5408\u4efb\u52d9",
-    "category": "C. \u6d3e\u9063\u8207\u4efb\u52d9",
+    "name": "外交代表/聯合任務",
+    "category": "C. 派遣與任務",
     "priority": 350,
     "conditions": {
       "joint_mission_is_true": true
@@ -489,12 +489,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u806f\u5408\u4efb\u52d9\u52a0\u7d66\uff0c\u53ef\u984d\u5916\u88dc\u52a9\u8a9e\u8a00/\u79ae\u8cd3\u652f\u51fa"
+    "notes": "聯合任務加給，可額外補助語言/禮賓支出"
   },
   {
     "id": "R207",
-    "name": "\u4efb\u52d9\u63d0\u524d\u7d50\u675f",
-    "category": "C. \u6d3e\u9063\u8207\u4efb\u52d9",
+    "name": "任務提前結束",
+    "category": "C. 派遣與任務",
     "priority": 360,
     "conditions": {
       "actual_days_lt_planned": true
@@ -512,12 +512,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u4efb\u52d9\u7e2e\u77ed\u6309\u5be6\u969b\u5929\u6578\u8a08\uff1b\u82e5\u9810\u652f\u9700\u8ffd\u56de\u5dee\u984d"
+    "notes": "任務縮短按實際天數計；若預支需追回差額"
   },
   {
     "id": "R208",
-    "name": "\u4efb\u52d9\u53d6\u6d88\u88dc\u511f",
-    "category": "C. \u6d3e\u9063\u8207\u4efb\u52d9",
+    "name": "任務取消補償",
+    "category": "C. 派遣與任務",
     "priority": 370,
     "conditions": {
       "cancel_hours_before_lte": "cancel_threshold_hours"
@@ -535,12 +535,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u51fa\u767c\u524d\u53d6\u6d88\u7d66\u4ed8\u56fa\u5b9a\u88dc\u511f"
+    "notes": "出發前取消給付固定補償"
   },
   {
     "id": "R301",
-    "name": "\u4f4f\u5bbf\u88dc\u8cbc",
-    "category": "D. \u4f4f\u5bbf\u3001\u9910\u98f2\u8207\u88dc\u8cbc\u62b5\u6263",
+    "name": "住宿補貼",
+    "category": "D. 住宿、餐飲與補貼抵扣",
     "priority": 400,
     "conditions": {
       "barracks_provided_is_false": true
@@ -558,38 +558,55 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u672a\u63d0\u4f9b\u5bbf\u820d\u6642\u6309\u8ecd\u968e\u8207\u57ce\u5e02\u7d66\u4ed8\u4f4f\u5bbf\u88dc\u8cbc"
+    "notes": "未提供宿舍時按軍階與城市給付住宿補貼"
   },
   {
     "id": "R302",
-    "name": "\u4f4f\u5bbf\u90e8\u5206\u81ea\u4ed8",
-    "category": "D. \u4f4f\u5bbf\u3001\u9910\u98f2\u8207\u88dc\u8cbc\u62b5\u6263",
-    "priority": 100,
-    "conditions": {},
-    "computation": {},
+    "name": "住宿部分自付",
+    "category": "D. 住宿、餐飲與補貼抵扣",
+    "priority": 410,
+    "conditions": {
+      "housing_allowance_gt": "housing_cap"
+    },
+    "computation": {
+      "type": "cap",
+      "formula": "min(housing_allowance, housing_cap)",
+      "inputs": {
+        "housing_allowance": "housing_allowance",
+        "housing_cap_ref": "lookup_table.housing_cap"
+      }
+    },
     "caps": null,
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u88dc\u8cbc\u9ad8\u65bc\u4e0a\u9650\uff0c\u4e0a\u9650\u4ee5 housing_cap \u8a08\uff0c\u81ea\u4ed8\u5dee\u984d\u4e0d\u5165\u85aa"
+    "notes": "補貼高於上限，上限以 housing_cap 計，自付差額不入薪"
   },
   {
     "id": "R303",
-    "name": "\u5bbf\u820d\u5165\u4f4f\u6263\u6b3e",
-    "category": "D. \u4f4f\u5bbf\u3001\u9910\u98f2\u8207\u88dc\u8cbc\u62b5\u6263",
-    "priority": 100,
-    "conditions": {},
-    "computation": {},
+    "name": "宿舍入住扣款",
+    "category": "D. 住宿、餐飲與補貼抵扣",
+    "priority": 420,
+    "conditions": {
+      "barracks_provided_is_true": true
+    },
+    "computation": {
+      "type": "flat_deduction",
+      "formula": "barracks_fee",
+      "inputs": {
+        "barracks_fee_ref": "lookup_table.barracks_fee"
+      }
+    },
     "caps": null,
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u4f7f\u7528\u8ecd\u65b9\u5bbf\u820d\uff0c\u6263\u9664 barracks_fee\uff08\u53ef\u80fd\u6309\u5929\uff09"
+    "notes": "使用軍方宿舍，扣除 barracks_fee（可能按天）"
   },
   {
     "id": "R304",
-    "name": "\u9910\u98df\u4f9b\u61c9\u62b5\u6263",
-    "category": "D. \u4f4f\u5bbf\u3001\u9910\u98f2\u8207\u88dc\u8cbc\u62b5\u6263",
+    "name": "餐食供應抵扣",
+    "category": "D. 住宿、餐飲與補貼抵扣",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -597,12 +614,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u8ecd\u65b9\u63d0\u4f9b\u9910\u98df\uff0c\u65e5\u652f\u6e1b\u5c11 meal_deduction\uff08\u53ef\u62c6\u5206\uff09"
+    "notes": "軍方提供餐食，日支減少 meal_deduction（可拆分）"
   },
   {
     "id": "R305",
-    "name": "\u7279\u6b8a\u98f2\u98df\u88dc\u52a9",
-    "category": "D. \u4f4f\u5bbf\u3001\u9910\u98f2\u8207\u88dc\u8cbc\u62b5\u6263",
+    "name": "特殊飲食補助",
+    "category": "D. 住宿、餐飲與補貼抵扣",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -610,12 +627,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u7b26\u5408\u91ab\u7642\u9700\u6c42\u8005\uff0c\u6bcf\u65e5\u52a0 special_meal_allowance"
+    "notes": "符合醫療需求者，每日加 special_meal_allowance"
   },
   {
     "id": "R401",
-    "name": "\u901a\u52e4\u88dc\u8cbc",
-    "category": "E. \u4ea4\u901a\u8207\u91cc\u7a0b",
+    "name": "通勤補貼",
+    "category": "E. 交通與里程",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -623,12 +640,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u4f9d\u4f4f\u5740\u5230\u99d0\u5730\u8ddd\u96e2 km\uff0c\u6309\u7d1a\u8ddd\u7d66 commute_allowance_band"
+    "notes": "依住址到駐地距離 km，按級距給 commute_allowance_band"
   },
   {
     "id": "R402",
-    "name": "\u516c\u52d9\u4ea4\u901a\u7968\u50f9\u5be6\u5831",
-    "category": "E. \u4ea4\u901a\u8207\u91cc\u7a0b",
+    "name": "公務交通票價實報",
+    "category": "E. 交通與里程",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -636,12 +653,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u63d0\u4ea4\u7968\u64da\uff0c\u7d66\u4ed8 min(receipt_amount, transit_cap)"
+    "notes": "提交票據，給付 min(receipt_amount, transit_cap)"
   },
   {
     "id": "R403",
-    "name": "\u79c1\u8eca\u516c\u7528\u91cc\u7a0b",
-    "category": "E. \u4ea4\u901a\u8207\u91cc\u7a0b",
+    "name": "私車公用里程",
+    "category": "E. 交通與里程",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -649,12 +666,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u4f9d\u91cc\u7a0b km * mileage_rate\uff0c\u5c01\u9802 monthly_mileage_cap"
+    "notes": "依里程 km * mileage_rate，封頂 monthly_mileage_cap"
   },
   {
     "id": "R404",
-    "name": "\u6230\u5340\u4ea4\u901a\u5371\u96aa\u4fc2\u6578",
-    "category": "E. \u4ea4\u901a\u8207\u91cc\u7a0b",
+    "name": "戰區交通危險係數",
+    "category": "E. 交通與里程",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -662,12 +679,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u6230\u5340\u79fb\u52d5\u91cc\u7a0b\u88dc\u8cbc * hazard_travel_multiplier"
+    "notes": "戰區移動里程補貼 * hazard_travel_multiplier"
   },
   {
     "id": "R405",
-    "name": "\u591c\u9593\u4ea4\u901a\u52a0\u6210",
-    "category": "E. \u4ea4\u901a\u8207\u91cc\u7a0b",
+    "name": "夜間交通加成",
+    "category": "E. 交通與里程",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -675,12 +692,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u591c\u9593\u51fa\u884c\uff0823:00\u201305:00\uff09\u4ea4\u901a\u88dc\u8cbc + night_travel_bonus"
+    "notes": "夜間出行（23:00–05:00）交通補貼 + night_travel_bonus"
   },
   {
     "id": "R501",
-    "name": "\u7737\u5c6c\u88dc\u52a9",
-    "category": "F. \u5bb6\u5ead\u3001\u7737\u5c6c\u8207\u793e\u798f",
+    "name": "眷屬補助",
+    "category": "F. 家庭、眷屬與社福",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -688,12 +705,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u4f9d\u6276\u990a\u4eba\u6578\u7d66 dependent_allowance\uff0c\u9700\u6bcf\u5e74\u9a57\u8b49"
+    "notes": "依扶養人數給 dependent_allowance，需每年驗證"
   },
   {
     "id": "R502",
-    "name": "\u914d\u5076\u7570\u5730\u88dc\u52a9",
-    "category": "F. \u5bb6\u5ead\u3001\u7737\u5c6c\u8207\u793e\u798f",
+    "name": "配偶異地補助",
+    "category": "F. 家庭、眷屬與社福",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -701,12 +718,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u914d\u5076\u5de5\u4f5c\u5730\u8207\u99d0\u5730\u4e0d\u540c\u7e23\u5e02\u4e14\u7b26\u5408\u689d\u4ef6\uff0c\u7d66 spouse_separation_allowance"
+    "notes": "配偶工作地與駐地不同縣市且符合條件，給 spouse_separation_allowance"
   },
   {
     "id": "R503",
-    "name": "\u5b50\u5973\u6559\u80b2\u88dc\u52a9",
-    "category": "F. \u5bb6\u5ead\u3001\u7737\u5c6c\u8207\u793e\u798f",
+    "name": "子女教育補助",
+    "category": "F. 家庭、眷屬與社福",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -714,12 +731,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u5b50\u5973\u5728\u5b78\u6309\u5b78\u5236 education_allowance[level]\uff0c\u6bcf\u5b78\u671f\u7d50\u7b97"
+    "notes": "子女在學按學制 education_allowance[level]，每學期結算"
   },
   {
     "id": "R504",
-    "name": "\u55ae\u89aa\u52a0\u6210",
-    "category": "F. \u5bb6\u5ead\u3001\u7737\u5c6c\u8207\u793e\u798f",
+    "name": "單親加成",
+    "category": "F. 家庭、眷屬與社福",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -727,12 +744,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u55ae\u89aa\u4e14\u6276\u990a\u5b50\u5973\uff0c\u7737\u5c6c\u88dc\u52a9 * single_parent_multiplier"
+    "notes": "單親且扶養子女，眷屬補助 * single_parent_multiplier"
   },
   {
     "id": "R505",
-    "name": "\u5bb6\u5c6c\u96a8\u884c\u6d77\u5916",
-    "category": "F. \u5bb6\u5ead\u3001\u7737\u5c6c\u8207\u793e\u798f",
+    "name": "家屬隨行海外",
+    "category": "F. 家庭、眷屬與社福",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -740,12 +757,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u6d77\u5916\u6d3e\u9063\u5141\u8a31\u5bb6\u5c6c\u96a8\u884c\u8005\uff0c\u7d66 accompanied_family_support"
+    "notes": "海外派遣允許家屬隨行者，給 accompanied_family_support"
   },
   {
     "id": "R506",
-    "name": "\u6258\u80b2\u88dc\u52a9",
-    "category": "F. \u5bb6\u5ead\u3001\u7737\u5c6c\u8207\u793e\u798f",
+    "name": "托育補助",
+    "category": "F. 家庭、眷屬與社福",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -753,12 +770,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u5b50\u5973\u5e74\u9f61 < childcare_age_limit\uff0c\u7d66 childcare_allowance"
+    "notes": "子女年齡 < childcare_age_limit，給 childcare_allowance"
   },
   {
     "id": "R601",
-    "name": "\u5c08\u696d\u8077\u80fd\u52a0\u7d66",
-    "category": "G. \u5c08\u696d\u3001\u8b49\u7167\u8207\u8a9e\u8a00",
+    "name": "專業職能加給",
+    "category": "G. 專業、證照與語言",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -766,12 +783,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u8077\u52d9\u985e\u578b\u70ba cyber/aviation/medical \u7b49\uff0c\u7d66 skill_allowance_table[job_type, level]"
+    "notes": "職務類型為 cyber/aviation/medical 等，給 skill_allowance_table[job_type, level]"
   },
   {
     "id": "R602",
-    "name": "\u8b49\u7167\u6d25\u8cbc",
-    "category": "G. \u5c08\u696d\u3001\u8b49\u7167\u8207\u8a9e\u8a00",
+    "name": "證照津貼",
+    "category": "G. 專業、證照與語言",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -779,12 +796,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u6301\u6709\u8b49\u7167 cert_id \u4e14\u672a\u904e\u671f\uff0c\u7d66 cert_allowance[cert_id]"
+    "notes": "持有證照 cert_id 且未過期，給 cert_allowance[cert_id]"
   },
   {
     "id": "R603",
-    "name": "\u8a9e\u8a00\u6d25\u8cbc",
-    "category": "G. \u5c08\u696d\u3001\u8b49\u7167\u8207\u8a9e\u8a00",
+    "name": "語言津貼",
+    "category": "G. 專業、證照與語言",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -792,12 +809,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u8a9e\u8a00\u7b49\u7d1a\u9054\u6a19\uff0c\u7d66 language_allowance[level]\uff0c\u806f\u5408\u4efb\u52d9\u671f\u9593\u53ef * joint_language_multiplier"
+    "notes": "語言等級達標，給 language_allowance[level]，聯合任務期間可 * joint_language_multiplier"
   },
   {
     "id": "R604",
-    "name": "\u5371\u96aa\u6280\u80fd\u6d25\u8cbc",
-    "category": "G. \u5c08\u696d\u3001\u8b49\u7167\u8207\u8a9e\u8a00",
+    "name": "危險技能津貼",
+    "category": "G. 專業、證照與語言",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -805,12 +822,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u6392\u7206/\u8df3\u5098/\u6df1\u6f5b\u7b49\uff0c\u4f9d\u6708\u56fa\u5b9a hazard_skill_allowance"
+    "notes": "排爆/跳傘/深潛等，依月固定 hazard_skill_allowance"
   },
   {
     "id": "R605",
-    "name": "\u6559\u5b98/\u8b1b\u5e2b\u6d25\u8cbc",
-    "category": "G. \u5c08\u696d\u3001\u8b49\u7167\u8207\u8a9e\u8a00",
+    "name": "教官/講師津貼",
+    "category": "G. 專業、證照與語言",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -818,12 +835,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u64d4\u4efb\u6559\u5b98\u6388\u8ab2\u6642\u6578 \u2265 teach_threshold\uff0c\u7d66 instructor_bonus"
+    "notes": "擔任教官授課時數 ≥ teach_threshold，給 instructor_bonus"
   },
   {
     "id": "R701",
-    "name": "\u4efb\u52d9\u5b8c\u6210\u734e\u91d1",
-    "category": "H. \u734e\u91d1\u3001\u61f2\u8655\u8207\u6263\u6b3e",
+    "name": "任務完成獎金",
+    "category": "H. 獎金、懲處與扣款",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -831,12 +848,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u4efb\u52d9\u8a55\u7b49\u9054 grade\uff0c\u7d66 mission_bonus[grade]"
+    "notes": "任務評等達 grade，給 mission_bonus[grade]"
   },
   {
     "id": "R702",
-    "name": "\u5e74\u7d42\u7e3e\u6548",
-    "category": "H. \u734e\u91d1\u3001\u61f2\u8655\u8207\u6263\u6b3e",
+    "name": "年終績效",
+    "category": "H. 獎金、懲處與扣款",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -844,12 +861,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u4f9d\u7e3e\u6548\u7b49\u7d1a A/B/C \u7d66 performance_bonus\uff0c\u672a\u6eff\u4e00\u5e74\u6309\u6bd4\u4f8b"
+    "notes": "依績效等級 A/B/C 給 performance_bonus，未滿一年按比例"
   },
   {
     "id": "R703",
-    "name": "\u51fa\u52e4\u4e0d\u826f\u6263\u6b3e",
-    "category": "H. \u734e\u91d1\u3001\u61f2\u8655\u8207\u6263\u6b3e",
+    "name": "出勤不良扣款",
+    "category": "H. 獎金、懲處與扣款",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -857,12 +874,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u9072\u5230/\u7f3a\u52e4\u9054 n \u6b21\uff0c\u6263 penalty_amount \u6216\u6309\u65e5\u6263"
+    "notes": "遲到/缺勤達 n 次，扣 penalty_amount 或按日扣"
   },
   {
     "id": "R704",
-    "name": "\u88dd\u5099\u907a\u5931\u6263\u6b3e",
-    "category": "H. \u734e\u91d1\u3001\u61f2\u8655\u8207\u6263\u6b3e",
+    "name": "裝備遺失扣款",
+    "category": "H. 獎金、懲處與扣款",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -870,12 +887,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u4f9d\u88dd\u5099\u7b49\u7d1a\u6263\u6b3e\uff0c\u53ef\u5206\u671f installments"
+    "notes": "依裝備等級扣款，可分期 installments"
   },
   {
     "id": "R705",
-    "name": "\u9810\u652f\u85aa\u8cc7",
-    "category": "H. \u734e\u91d1\u3001\u61f2\u8655\u8207\u6263\u6b3e",
+    "name": "預支薪資",
+    "category": "H. 獎金、懲處與扣款",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -883,12 +900,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u53ef\u9810\u652f advance_amount\uff0c\u6bcf\u6708\u56fa\u5b9a\u6263\u56de advance_repay"
+    "notes": "可預支 advance_amount，每月固定扣回 advance_repay"
   },
   {
     "id": "R706",
-    "name": "\u8ffd\u56de\u591a\u9818",
-    "category": "H. \u734e\u91d1\u3001\u61f2\u8655\u8207\u6263\u6b3e",
+    "name": "追回多領",
+    "category": "H. 獎金、懲處與扣款",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -896,12 +913,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u591a\u9818\u5efa\u7acb recovery_plan\uff0c\u6bcf\u6708\u6263 recovery_rate \u4e14\u4e0d\u5f97\u4f4e\u65bc\u6700\u4f4e\u4fdd\u969c"
+    "notes": "多領建立 recovery_plan，每月扣 recovery_rate 且不得低於最低保障"
   },
   {
     "id": "R801",
-    "name": "\u8abf\u8077\u5207\u5206",
-    "category": "I. \u671f\u9593\u5207\u5206\u8207\u72c0\u614b\u8b8a\u66f4",
+    "name": "調職切分",
+    "category": "I. 期間切分與狀態變更",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -909,12 +926,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u540c\u6708\u8de8\u55ae\u4f4d\uff0c\u6d25\u8cbc\u6309\u55ae\u4f4d\u653f\u7b56\u5207\u5206"
+    "notes": "同月跨單位，津貼按單位政策切分"
   },
   {
     "id": "R802",
-    "name": "\u6d77\u5916\u2192\u570b\u5167\u5207\u56de",
-    "category": "I. \u671f\u9593\u5207\u5206\u8207\u72c0\u614b\u8b8a\u66f4",
+    "name": "海外→國內切回",
+    "category": "I. 期間切分與狀態變更",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -922,12 +939,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u8fd4\u570b\u65e5\u5f8c\u6d77\u5916\u76f8\u95dc\u6d25\u8cbc\u505c\u6b62\uff0c\u4e26\u89f8\u767c\u9910\u5bbf\u62b5\u6263\u8b8a\u66f4"
+    "notes": "返國日後海外相關津貼停止，並觸發餐宿抵扣變更"
   },
   {
     "id": "R803",
-    "name": "\u4f11\u5047\u8207\u88dc\u8cbc",
-    "category": "I. \u671f\u9593\u5207\u5206\u8207\u72c0\u614b\u8b8a\u66f4",
+    "name": "休假與補貼",
+    "category": "I. 期間切分與狀態變更",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -935,12 +952,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u4f11\u5047\u671f\u9593\u4e0d\u8a08\u52e4\u52d9\u6d25\u8cbc\uff0c\u4f46\u4fdd\u7559\u57fa\u672c\u85aa\u8207\u90e8\u5206\u56fa\u5b9a\u6d25\u8cbc"
+    "notes": "休假期間不計勤務津貼，但保留基本薪與部分固定津貼"
   },
   {
     "id": "R804",
-    "name": "\u75c5\u5047\u7279\u6b8a",
-    "category": "I. \u671f\u9593\u5207\u5206\u8207\u72c0\u614b\u8b8a\u66f4",
+    "name": "病假特殊",
+    "category": "I. 期間切分與狀態變更",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -948,12 +965,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u75c5\u5047 > x \u5929\uff0c\u90e8\u5206\u6d25\u8cbc\u505c\u6b62\uff1b\u516c\u50b7\u5247\u6539\u7528\u516c\u50b7\u88dc\u511f\u898f\u5247"
+    "notes": "病假 > x 天，部分津貼停止；公傷則改用公傷補償規則"
   },
   {
     "id": "R805",
-    "name": "\u9000\u5f79/\u96e2\u8077\u7d50\u7b97",
-    "category": "I. \u671f\u9593\u5207\u5206\u8207\u72c0\u614b\u8b8a\u66f4",
+    "name": "退役/離職結算",
+    "category": "I. 期間切分與狀態變更",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -961,12 +978,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u96e2\u8077\u65e5\u7576\u6708\u6309\u5929\u8a08\u85aa\uff0c\u7d50\u6e05\u672a\u4f11\u5047\u6298\u73fe\u3001\u9810\u652f\u3001\u8ffd\u8a0e"
+    "notes": "離職日當月按天計薪，結清未休假折現、預支、追討"
   },
   {
     "id": "R901",
-    "name": "\u6700\u4f4e\u4fdd\u969c",
-    "category": "J. \u5b89\u5168\u4e0b\u9650",
+    "name": "最低保障",
+    "category": "J. 安全下限",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -974,12 +991,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u6263\u6b3e\u5f8c\u5be6\u767c\u4e0d\u5f97\u4f4e\u65bc minimum_take_home\uff1b\u8d85\u904e\u90e8\u5206\u9806\u5ef6"
+    "notes": "扣款後實發不得低於 minimum_take_home；超過部分順延"
   },
   {
     "id": "R902",
-    "name": "\u6263\u6b3e\u512a\u5148\u5e8f",
-    "category": "J. \u5b89\u5168\u4e0b\u9650",
+    "name": "扣款優先序",
+    "category": "J. 安全下限",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -987,12 +1004,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u4f9d\u5e8f\u6263\u6cd5\u5b9a\u6263\u6b3e\u2192\u9810\u652f\u2192\u8ffd\u56de\u591a\u9818\u2192\u5176\u4ed6"
+    "notes": "依序扣法定扣款→預支→追回多領→其他"
   },
   {
     "id": "R903",
-    "name": "\u5c01\u9802\u898f\u5247",
-    "category": "J. \u5b89\u5168\u4e0b\u9650",
+    "name": "封頂規則",
+    "category": "J. 安全下限",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -1000,12 +1017,12 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u6240\u6709\u53ef\u758a\u52a0\u6d25\u8cbc\u52a0\u7e3d\u4e0d\u5f97\u8d85\u904e base_salary * allowance_cap_rate"
+    "notes": "所有可疊加津貼加總不得超過 base_salary * allowance_cap_rate"
   },
   {
     "id": "R904",
-    "name": "\u4e92\u65a5\u898f\u5247\u8868",
-    "category": "J. \u5b89\u5168\u4e0b\u9650",
+    "name": "互斥規則表",
+    "category": "J. 安全下限",
     "priority": 100,
     "conditions": {},
     "computation": {},
@@ -1013,6 +1030,6 @@
     "floors": null,
     "exclusive_group": null,
     "effective_date_range": null,
-    "notes": "\u6d25\u8cbc\u4e92\u65a5\u7528 exclusive_groups \u7ba1\u63a7\uff08\u540c\u7d44\u53ea\u80fd\u53d6\u4e00\u6216\u53d6\u9ad8\uff09"
+    "notes": "津貼互斥用 exclusive_groups 管控（同組只能取一或取高）"
   }
 ]

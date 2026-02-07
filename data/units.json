@@ -4,209 +4,239 @@
     "name": "1st Infantry Division",
     "branch": "Army",
     "location": "Paris",
-    "barracks_provided": true
+    "barracks_provided": true,
+    "meals_provided": false
   },
   {
     "id": "U002",
     "name": "2nd Armored Brigade",
     "branch": "Army",
     "location": "Lyon",
-    "barracks_provided": true
+    "barracks_provided": true,
+    "meals_provided": false
   },
   {
     "id": "U003",
     "name": "Fleet Operations",
     "branch": "Navy",
     "location": "Toulon",
-    "barracks_provided": false
+    "barracks_provided": false,
+    "meals_provided": false
   },
   {
     "id": "U004",
     "name": "Atlantic Patrol Wing",
     "branch": "Navy",
     "location": "Brest",
-    "barracks_provided": false
+    "barracks_provided": false,
+    "meals_provided": false
   },
   {
     "id": "U005",
     "name": "Air Defense Command",
     "branch": "AirForce",
     "location": "Orleans",
-    "barracks_provided": true
+    "barracks_provided": true,
+    "meals_provided": false
   },
   {
     "id": "U006",
     "name": "Tactical Air Wing",
     "branch": "AirForce",
     "location": "Bordeaux",
-    "barracks_provided": true
+    "barracks_provided": true,
+    "meals_provided": false
   },
   {
     "id": "U007",
     "name": "3rd Logistics Regiment",
     "branch": "Army",
     "location": "Lille",
-    "barracks_provided": false
+    "barracks_provided": false,
+    "meals_provided": false
   },
   {
     "id": "U008",
     "name": "4th Signals Battalion",
     "branch": "Army",
     "location": "Strasbourg",
-    "barracks_provided": false
+    "barracks_provided": false,
+    "meals_provided": false
   },
   {
     "id": "U009",
     "name": "5th Artillery Group",
     "branch": "Army",
     "location": "Metz",
-    "barracks_provided": false
+    "barracks_provided": false,
+    "meals_provided": false
   },
   {
     "id": "U010",
     "name": "6th Engineer Regiment",
     "branch": "Army",
     "location": "Grenoble",
-    "barracks_provided": false
+    "barracks_provided": false,
+    "meals_provided": false
   },
   {
     "id": "U011",
     "name": "7th Medical Company",
     "branch": "Army",
     "location": "Marseille",
-    "barracks_provided": false
+    "barracks_provided": false,
+    "meals_provided": false
   },
   {
     "id": "U012",
     "name": "8th Recon Squadron",
     "branch": "Army",
     "location": "Reims",
-    "barracks_provided": false
+    "barracks_provided": false,
+    "meals_provided": false
   },
   {
     "id": "U013",
     "name": "9th Training Center",
     "branch": "Army",
     "location": "Dijon",
-    "barracks_provided": true
+    "barracks_provided": true,
+    "meals_provided": false
   },
   {
     "id": "U014",
     "name": "10th Supply Depot",
     "branch": "Army",
     "location": "Amiens",
-    "barracks_provided": true
+    "barracks_provided": true,
+    "meals_provided": false
   },
   {
     "id": "U015",
     "name": "Mediterranean Task Group",
     "branch": "Navy",
     "location": "Nice",
-    "barracks_provided": true
+    "barracks_provided": true,
+    "meals_provided": false
   },
   {
     "id": "U016",
     "name": "Submarine Command",
     "branch": "Navy",
     "location": "Cherbourg",
-    "barracks_provided": true
+    "barracks_provided": true,
+    "meals_provided": false
   },
   {
     "id": "U017",
     "name": "Naval Air Station",
     "branch": "Navy",
-    "location": "Hy\u00e8res",
-    "barracks_provided": false
+    "location": "Hyères",
+    "barracks_provided": false,
+    "meals_provided": false
   },
   {
     "id": "U018",
     "name": "Coastal Surveillance",
     "branch": "Navy",
     "location": "La Rochelle",
-    "barracks_provided": false
+    "barracks_provided": false,
+    "meals_provided": false
   },
   {
     "id": "U019",
     "name": "Undersea Warfare Center",
     "branch": "Navy",
     "location": "Lorient",
-    "barracks_provided": false
+    "barracks_provided": false,
+    "meals_provided": false
   },
   {
     "id": "U020",
     "name": "Logistics Flotilla",
     "branch": "Navy",
     "location": "Le Havre",
-    "barracks_provided": false
+    "barracks_provided": false,
+    "meals_provided": false
   },
   {
     "id": "U021",
     "name": "Fighter Squadron Alpha",
     "branch": "AirForce",
     "location": "Nancy",
-    "barracks_provided": true
+    "barracks_provided": true,
+    "meals_provided": false
   },
   {
     "id": "U022",
     "name": "Strategic Transport Wing",
     "branch": "AirForce",
     "location": "Tours",
-    "barracks_provided": true
+    "barracks_provided": true,
+    "meals_provided": false
   },
   {
     "id": "U023",
     "name": "Air Surveillance Group",
     "branch": "AirForce",
     "location": "Rennes",
-    "barracks_provided": false
+    "barracks_provided": false,
+    "meals_provided": false
   },
   {
     "id": "U024",
     "name": "Training Air Base",
     "branch": "AirForce",
     "location": "Montpellier",
-    "barracks_provided": true
+    "barracks_provided": true,
+    "meals_provided": false
   },
   {
     "id": "U025",
     "name": "Helicopter Support Unit",
     "branch": "AirForce",
     "location": "Pau",
-    "barracks_provided": false
+    "barracks_provided": false,
+    "meals_provided": false
   },
   {
     "id": "U026",
     "name": "Electronic Warfare Wing",
     "branch": "AirForce",
     "location": "Nimes",
-    "barracks_provided": true
+    "barracks_provided": true,
+    "meals_provided": false
   },
   {
     "id": "U027",
     "name": "11th Infantry Brigade",
     "branch": "Army",
     "location": "Perpignan",
-    "barracks_provided": true
+    "barracks_provided": true,
+    "meals_provided": false
   },
   {
     "id": "U028",
     "name": "12th Armored Regiment",
     "branch": "Army",
     "location": "Caen",
-    "barracks_provided": true
+    "barracks_provided": true,
+    "meals_provided": false
   },
   {
     "id": "U029",
     "name": "Western Fleet Support",
     "branch": "Navy",
     "location": "Saint-Nazaire",
-    "barracks_provided": true
+    "barracks_provided": true,
+    "meals_provided": false
   },
   {
     "id": "U030",
     "name": "Maritime Security Unit",
     "branch": "Navy",
     "location": "Calais",
-    "barracks_provided": false
+    "barracks_provided": false,
+    "meals_provided": false
   }
 ]

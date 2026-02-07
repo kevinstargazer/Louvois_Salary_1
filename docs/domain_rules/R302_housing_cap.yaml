@@ -1,0 +1,23 @@
+rule_id: R302
+name: 住宿部分自付
+applies_to:
+  entity: employee
+  conditions:
+    - field: housing_allowance
+      operator: '>'
+      value_ref: lookup_table.housing_cap
+effect:
+  type: cap
+  target: housing_allowance
+  cap_ref: lookup_table.housing_cap
+priority: 410
+example:
+  input:
+    employee:
+      id: E001
+      name: Jean Dupont
+    housing_allowance: 1200
+    lookup_table:
+      housing_cap: 900
+  output:
+    housing_allowance: 900

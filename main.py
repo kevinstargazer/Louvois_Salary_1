@@ -52,7 +52,7 @@ def main() -> None:
             "per_diem_domestic,per_diem_international,hazard_allowance,"
             "combat_allowance,sea_duty_allowance,joint_mission_bonus,"
             "per_diem_recovery,cancel_compensation,"
-            "housing_allowance,fatigue_multiplier,total_base"
+            "housing_allowance,barracks_deduction,fatigue_multiplier,total_base"
         )
 
         # Apply R001 to employees
@@ -247,6 +247,16 @@ def main() -> None:
                 housing_table = lookup_tables.get("housing_allowance_table", {})
                 rank_table = housing_table.get(city, {})
                 housing_allowance = rank_table.get(rank, 0)
+            # R302: housing cap (self-pay for excess)
+            housing_cap = lookup_tables.get("housing_cap")
+            if housing_cap is not None and housing_cap > 0:
+                if housing_allowance > housing_cap:
+                    housing_allowance = housing_cap
+            # R303: barracks fee deduction (if barracks provided)
+            barracks_fee = lookup_tables.get("barracks_fee", 0)
+            barracks_deduction = 0
+            if barracks_provided:
+                barracks_deduction = barracks_fee
             # R105: fatigue multiplier (applied to duty allowances)
             fatigue_cfg = lookup_tables.get("fatigue", {})
             streak_threshold = fatigue_cfg.get("streak_threshold", 0)
@@ -281,6 +291,7 @@ def main() -> None:
                 - per_diem_recovery
                 + cancel_compensation
                 + housing_allowance
+                - barracks_deduction
             )
             print(
                 f"{emp.get('id')},"
@@ -311,6 +322,7 @@ def main() -> None:
                 f"{fmt_amount(per_diem_recovery)},"
                 f"{fmt_amount(cancel_compensation)},"
                 f"{fmt_amount(housing_allowance)},"
+                f"{fmt_amount(barracks_deduction)},"
                 f"{fmt_amount(applied_multiplier)},"
                 f"{fmt_amount(total_base)}"
             )

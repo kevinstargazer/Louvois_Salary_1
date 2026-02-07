@@ -1,0 +1,26 @@
+rule_id: R303
+name: 宿舍入住扣款
+applies_to:
+  entity: employee
+  conditions:
+    - field: barracks_provided
+      operator: '='
+      value: true
+effect:
+  type: flat_deduction
+  target: barracks_deduction
+  expression: barracks_fee
+  parameters:
+    barracks_fee_ref: lookup_table.barracks_fee
+priority: 420
+example:
+  input:
+    employee:
+      id: E010
+      name: Claire Garnier
+    unit:
+      barracks_provided: true
+    lookup_table:
+      barracks_fee: 300
+  output:
+    barracks_deduction: 300
