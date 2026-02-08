@@ -1,0 +1,31 @@
+rule_id: R401
+name: 通勤補貼
+applies_to:
+  entity: employee
+  conditions:
+    - field: commute_km
+      operator: '>'
+      value: 0
+effect:
+  type: band_lookup
+  target: commute_allowance
+  expression: commute_allowance_band[commute_km]
+  parameters:
+    commute_allowance_band_ref: lookup_table.commute_allowance_band
+priority: 450
+example:
+  input:
+    employee:
+      id: E007
+      name: Antoine Dubois
+      commute_km: 12
+    lookup_table:
+      commute_allowance_band:
+        - max_km: 5
+          allowance: 100
+        - max_km: 10
+          allowance: 200
+        - max_km: 20
+          allowance: 350
+  output:
+    commute_allowance: 350

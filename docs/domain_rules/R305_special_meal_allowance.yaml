@@ -1,0 +1,25 @@
+rule_id: R305
+name: 特殊飲食補助
+applies_to:
+  entity: employee
+  conditions:
+    - field: special_meal_eligible
+      operator: '='
+      value: true
+effect:
+  type: flat_allowance
+  target: special_meal_allowance
+  expression: special_meal_allowance
+  parameters:
+    special_meal_allowance_ref: lookup_table.special_meal_allowance
+priority: 440
+example:
+  input:
+    employee:
+      id: E003
+      name: Pierre Martin
+      special_meal_eligible: true
+    lookup_table:
+      special_meal_allowance: 80
+  output:
+    special_meal_allowance: 80

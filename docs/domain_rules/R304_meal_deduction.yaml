@@ -1,0 +1,26 @@
+rule_id: R304
+name: 餐食供應抵扣
+applies_to:
+  entity: employee
+  conditions:
+    - field: meals_provided
+      operator: '='
+      value: true
+effect:
+  type: flat_deduction
+  target: meal_deduction
+  expression: meal_deduction
+  parameters:
+    meal_deduction_ref: lookup_table.meal_deduction
+priority: 430
+example:
+  input:
+    employee:
+      id: E006
+      name: Camille Laurent
+    unit:
+      meals_provided: true
+    lookup_table:
+      meal_deduction: 120
+  output:
+    meal_deduction: 120

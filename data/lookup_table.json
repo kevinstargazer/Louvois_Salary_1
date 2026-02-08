@@ -170,5 +170,28 @@
     }
   },
   "barracks_fee": 300,
-  "meal_deduction": 120
+  "meal_deduction": 120,
+  "special_meal_allowance": 80,
+  "commute_allowance_band": [
+    {
+      "max_km": 5,
+      "allowance": 100
+    },
+    {
+      "max_km": 10,
+      "allowance": 200
+    },
+    {
+      "max_km": 20,
+      "allowance": 350
+    },
+    {
+      "max_km": 40,
+      "allowance": 500
+    },
+    {
+      "max_km": 9999,
+      "allowance": 700
+    }
+  ]
 }

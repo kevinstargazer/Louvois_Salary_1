@@ -16,6 +16,22 @@ def fmt_amount(value: float) -> str:
     return f"{value:.2f}"
 
 
+def lookup_band_allowance(commute_km, bands):
+    try:
+        km = float(commute_km)
+    except (TypeError, ValueError):
+        return None
+    if km <= 0:
+        return None
+    for band in sorted(bands or [], key=lambda b: b.get("max_km", 0)):
+        max_km = band.get("max_km")
+        if max_km is None:
+            continue
+        if km <= max_km:
+            return band.get("allowance", 0)
+    return None
+
+
 def main() -> None:
     # Track CLI runtime in seconds.
     start_time = time.perf_counter()
@@ -46,13 +62,14 @@ def main() -> None:
         print(
             "id,name,rank,promotion_date,new_rank,months_in_service,base_salary_raw,base_salary,"
             "seniority_allowance,acting_allowance,"
-            "selected_housing_allowance,selected_transport_allowance,"
+            "commute_allowance,selected_housing_allowance,selected_transport_allowance,"
             "night_allowance,weekend_allowance,holiday_allowance,overtime_allowance,"
             "call_back_allowance,standby_allowance,training_allowance,"
             "per_diem_domestic,per_diem_international,hazard_allowance,"
             "combat_allowance,sea_duty_allowance,joint_mission_bonus,"
             "per_diem_recovery,cancel_compensation,"
-            "housing_allowance,barracks_deduction,fatigue_multiplier,total_base"
+            "housing_allowance,barracks_deduction,meal_deduction,special_meal_allowance,"
+            "fatigue_multiplier,total_base"
         )
 
         # Apply R001 to employees
@@ -116,7 +133,13 @@ def main() -> None:
             housing_allowance = emp.get("housing_allowance", 0)
             barracks_subsidy = emp.get("barracks_subsidy", 0)
             selected_housing_allowance = max(housing_allowance, barracks_subsidy)
+            # R401: commute allowance by distance band
             commute_allowance = emp.get("commute_allowance", 0)
+            commute_band = lookup_tables.get("commute_allowance_band", [])
+            commute_km = emp.get("commute_km")
+            band_allowance = lookup_band_allowance(commute_km, commute_band)
+            if band_allowance is not None:
+                commute_allowance = band_allowance
             official_vehicle_allowance = emp.get("official_vehicle_allowance", 0)
             selected_transport_allowance = max(
                 commute_allowance, official_vehicle_allowance
@@ -257,6 +280,17 @@ def main() -> None:
             barracks_deduction = 0
             if barracks_provided:
                 barracks_deduction = barracks_fee
+            # R304: meal deduction (if meals provided)
+            meals_provided = unit.get("meals_provided", False)
+            meal_deduction = 0
+            if meals_provided:
+                meal_deduction = lookup_tables.get("meal_deduction", 0)
+            # R305: special meal allowance (if eligible)
+            special_meal_allowance = 0
+            if emp.get("special_meal_eligible", False):
+                special_meal_allowance = lookup_tables.get(
+                    "special_meal_allowance", 0
+                )
             # R105: fatigue multiplier (applied to duty allowances)
             fatigue_cfg = lookup_tables.get("fatigue", {})
             streak_threshold = fatigue_cfg.get("streak_threshold", 0)
@@ -292,6 +326,8 @@ def main() -> None:
                 + cancel_compensation
                 + housing_allowance
                 - barracks_deduction
+                - meal_deduction
+                + special_meal_allowance
             )
             print(
                 f"{emp.get('id')},"
@@ -304,6 +340,7 @@ def main() -> None:
                 f"{fmt_amount(base_salary)},"
                 f"{fmt_amount(seniority_allowance)},"
                 f"{fmt_amount(acting_allowance)},"
+                f"{fmt_amount(commute_allowance)},"
                 f"{fmt_amount(selected_housing_allowance)},"
                 f"{fmt_amount(selected_transport_allowance)},"
                 f"{fmt_amount(night_allowance)},"
@@ -323,6 +360,8 @@ def main() -> None:
                 f"{fmt_amount(cancel_compensation)},"
                 f"{fmt_amount(housing_allowance)},"
                 f"{fmt_amount(barracks_deduction)},"
+                f"{fmt_amount(meal_deduction)},"
+                f"{fmt_amount(special_meal_allowance)},"
                 f"{fmt_amount(applied_multiplier)},"
                 f"{fmt_amount(total_base)}"
             )

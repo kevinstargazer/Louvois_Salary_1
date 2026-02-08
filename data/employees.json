@@ -23,7 +23,9 @@
     "call_back_count": 1,
     "standby_hours": 10,
     "called_in": false,
-    "training_days": 8
+    "training_days": 8,
+    "special_meal_eligible": true,
+    "commute_km": 4
   },
   {
     "id": "E002",
@@ -49,7 +51,9 @@
     "call_back_count": 0,
     "standby_hours": 24,
     "called_in": true,
-    "training_days": 9
+    "training_days": 9,
+    "special_meal_eligible": false,
+    "commute_km": 8
   },
   {
     "id": "E003",
@@ -75,7 +79,9 @@
     "call_back_count": 4,
     "standby_hours": 12,
     "called_in": false,
-    "training_days": 2
+    "training_days": 2,
+    "special_meal_eligible": false,
+    "commute_km": 12
   },
   {
     "id": "E004",
@@ -101,7 +107,9 @@
     "call_back_count": 2,
     "standby_hours": 0,
     "called_in": false,
-    "training_days": 0
+    "training_days": 0,
+    "special_meal_eligible": true,
+    "commute_km": 16
   },
   {
     "id": "E005",
@@ -127,7 +135,9 @@
     "call_back_count": 0,
     "standby_hours": 24,
     "called_in": true,
-    "training_days": 10
+    "training_days": 10,
+    "special_meal_eligible": false,
+    "commute_km": 20
   },
   {
     "id": "E006",
@@ -153,7 +163,9 @@
     "call_back_count": 5,
     "standby_hours": 11,
     "called_in": true,
-    "training_days": 10
+    "training_days": 10,
+    "special_meal_eligible": true,
+    "commute_km": 4
   },
   {
     "id": "E007",
@@ -179,7 +191,9 @@
     "call_back_count": 0,
     "standby_hours": 22,
     "called_in": true,
-    "training_days": 6
+    "training_days": 6,
+    "special_meal_eligible": false,
+    "commute_km": 8
   },
   {
     "id": "E008",
@@ -205,7 +219,9 @@
     "call_back_count": 5,
     "standby_hours": 7,
     "called_in": false,
-    "training_days": 4
+    "training_days": 4,
+    "special_meal_eligible": false,
+    "commute_km": 12
   },
   {
     "id": "E009",
@@ -231,7 +247,9 @@
     "call_back_count": 0,
     "standby_hours": 15,
     "called_in": true,
-    "training_days": 9
+    "training_days": 9,
+    "special_meal_eligible": true,
+    "commute_km": 16
   },
   {
     "id": "E010",
@@ -257,7 +275,9 @@
     "call_back_count": 0,
     "standby_hours": 30,
     "called_in": true,
-    "training_days": 8
+    "training_days": 8,
+    "special_meal_eligible": false,
+    "commute_km": 20
   },
   {
     "id": "E011",
@@ -283,7 +303,9 @@
     "call_back_count": 0,
     "standby_hours": 17,
     "called_in": true,
-    "training_days": 2
+    "training_days": 2,
+    "special_meal_eligible": true,
+    "commute_km": 4
   },
   {
     "id": "E012",
@@ -309,7 +331,9 @@
     "call_back_count": 0,
     "standby_hours": 23,
     "called_in": true,
-    "training_days": 5
+    "training_days": 5,
+    "special_meal_eligible": false,
+    "commute_km": 8
   },
   {
     "id": "E013",
@@ -335,7 +359,9 @@
     "call_back_count": 0,
     "standby_hours": 28,
     "called_in": false,
-    "training_days": 9
+    "training_days": 9,
+    "special_meal_eligible": false,
+    "commute_km": 12
   },
   {
     "id": "E014",
@@ -361,7 +387,9 @@
     "call_back_count": 0,
     "standby_hours": 23,
     "called_in": true,
-    "training_days": 7
+    "training_days": 7,
+    "special_meal_eligible": true,
+    "commute_km": 16
   },
   {
     "id": "E015",
@@ -387,7 +415,9 @@
     "call_back_count": 1,
     "standby_hours": 20,
     "called_in": false,
-    "training_days": 4
+    "training_days": 4,
+    "special_meal_eligible": false,
+    "commute_km": 20
   },
   {
     "id": "E016",
@@ -413,7 +443,9 @@
     "call_back_count": 0,
     "standby_hours": 26,
     "called_in": true,
-    "training_days": 4
+    "training_days": 4,
+    "special_meal_eligible": false,
+    "commute_km": 4
   },
   {
     "id": "E017",
@@ -439,7 +471,9 @@
     "call_back_count": 3,
     "standby_hours": 0,
     "called_in": false,
-    "training_days": 2
+    "training_days": 2,
+    "special_meal_eligible": true,
+    "commute_km": 8
   },
   {
     "id": "E018",
@@ -465,7 +499,9 @@
     "call_back_count": 2,
     "standby_hours": 8,
     "called_in": false,
-    "training_days": 12
+    "training_days": 12,
+    "special_meal_eligible": false,
+    "commute_km": 12
   },
   {
     "id": "E019",
@@ -491,7 +527,9 @@
     "call_back_count": 5,
     "standby_hours": 20,
     "called_in": true,
-    "training_days": 12
+    "training_days": 12,
+    "special_meal_eligible": false,
+    "commute_km": 16
   },
   {
     "id": "E020",
@@ -517,7 +555,9 @@
     "call_back_count": 0,
     "standby_hours": 26,
     "called_in": true,
-    "training_days": 10
+    "training_days": 10,
+    "special_meal_eligible": false,
+    "commute_km": 20
   },
   {
     "id": "E021",
@@ -543,7 +583,9 @@
     "call_back_count": 0,
     "standby_hours": 24,
     "called_in": true,
-    "training_days": 8
+    "training_days": 8,
+    "special_meal_eligible": true,
+    "commute_km": 4
   },
   {
     "id": "E022",
@@ -569,7 +611,9 @@
     "call_back_count": 5,
     "standby_hours": 5,
     "called_in": true,
-    "training_days": 0
+    "training_days": 0,
+    "special_meal_eligible": false,
+    "commute_km": 8
   },
   {
     "id": "E023",
@@ -595,7 +639,9 @@
     "call_back_count": 0,
     "standby_hours": 29,
     "called_in": false,
-    "training_days": 0
+    "training_days": 0,
+    "special_meal_eligible": false,
+    "commute_km": 12
   },
   {
     "id": "E024",
@@ -621,7 +667,9 @@
     "call_back_count": 3,
     "standby_hours": 3,
     "called_in": false,
-    "training_days": 0
+    "training_days": 0,
+    "special_meal_eligible": true,
+    "commute_km": 16
   },
   {
     "id": "E025",
@@ -647,7 +695,9 @@
     "call_back_count": 1,
     "standby_hours": 6,
     "called_in": true,
-    "training_days": 9
+    "training_days": 9,
+    "special_meal_eligible": false,
+    "commute_km": 20
   },
   {
     "id": "E026",
@@ -673,7 +723,9 @@
     "call_back_count": 0,
     "standby_hours": 19,
     "called_in": false,
-    "training_days": 6
+    "training_days": 6,
+    "special_meal_eligible": false,
+    "commute_km": 4
   },
   {
     "id": "E027",
@@ -699,7 +751,9 @@
     "call_back_count": 0,
     "standby_hours": 25,
     "called_in": false,
-    "training_days": 5
+    "training_days": 5,
+    "special_meal_eligible": false,
+    "commute_km": 8
   },
   {
     "id": "E028",
@@ -725,7 +779,9 @@
     "call_back_count": 0,
     "standby_hours": 0,
     "called_in": true,
-    "training_days": 9
+    "training_days": 9,
+    "special_meal_eligible": true,
+    "commute_km": 12
   },
   {
     "id": "E029",
@@ -751,7 +807,9 @@
     "call_back_count": 0,
     "standby_hours": 14,
     "called_in": false,
-    "training_days": 11
+    "training_days": 11,
+    "special_meal_eligible": true,
+    "commute_km": 16
   },
   {
     "id": "E030",
@@ -777,6 +835,8 @@
     "call_back_count": 4,
     "standby_hours": 0,
     "called_in": true,
-    "training_days": 8
+    "training_days": 8,
+    "special_meal_eligible": false,
+    "commute_km": 20
   }
 ]

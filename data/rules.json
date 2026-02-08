@@ -620,9 +620,17 @@
     "id": "R305",
     "name": "特殊飲食補助",
     "category": "D. 住宿、餐飲與補貼抵扣",
-    "priority": 100,
-    "conditions": {},
-    "computation": {},
+    "priority": 440,
+    "conditions": {
+      "special_meal_eligible_is_true": true
+    },
+    "computation": {
+      "type": "flat_allowance",
+      "formula": "special_meal_allowance",
+      "inputs": {
+        "special_meal_allowance_ref": "lookup_table.special_meal_allowance"
+      }
+    },
     "caps": null,
     "floors": null,
     "exclusive_group": null,
@@ -633,9 +641,18 @@
     "id": "R401",
     "name": "通勤補貼",
     "category": "E. 交通與里程",
-    "priority": 100,
-    "conditions": {},
-    "computation": {},
+    "priority": 450,
+    "conditions": {
+      "commute_km_gt": 0
+    },
+    "computation": {
+      "type": "band_lookup",
+      "formula": "commute_allowance_band[commute_km]",
+      "inputs": {
+        "commute_km": "commute_km",
+        "commute_allowance_band_ref": "lookup_table.commute_allowance_band"
+      }
+    },
     "caps": null,
     "floors": null,
     "exclusive_group": null,
