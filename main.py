@@ -62,7 +62,8 @@ def main() -> None:
         print(
             "id,name,rank,promotion_date,new_rank,months_in_service,base_salary_raw,base_salary,"
             "seniority_allowance,acting_allowance,"
-            "commute_allowance,selected_housing_allowance,selected_transport_allowance,"
+            "commute_allowance,transit_allowance,mileage_allowance,"
+            "selected_housing_allowance,selected_transport_allowance,"
             "night_allowance,weekend_allowance,holiday_allowance,overtime_allowance,"
             "call_back_allowance,standby_allowance,training_allowance,"
             "per_diem_domestic,per_diem_international,hazard_allowance,"
@@ -140,9 +141,31 @@ def main() -> None:
             band_allowance = lookup_band_allowance(commute_km, commute_band)
             if band_allowance is not None:
                 commute_allowance = band_allowance
+            # R402: transit allowance (cap receipt amount)
+            receipt_amount = emp.get("receipt_amount", 0)
+            transit_cap = lookup_tables.get("transit_cap", 0)
+            transit_allowance = min(receipt_amount, transit_cap)
+            # R403: mileage allowance (cap monthly amount)
+            mileage_km = emp.get("mileage_km", 0)
+            mileage_rate = lookup_tables.get("mileage_rate", 0)
+            monthly_mileage_cap = lookup_tables.get("monthly_mileage_cap", 0)
+            mileage_allowance = mileage_km * mileage_rate
+            if monthly_mileage_cap > 0 and mileage_allowance > monthly_mileage_cap:
+                mileage_allowance = monthly_mileage_cap
             official_vehicle_allowance = emp.get("official_vehicle_allowance", 0)
             selected_transport_allowance = max(
-                commute_allowance, official_vehicle_allowance
+                commute_allowance,
+                official_vehicle_allowance,
+                transit_allowance,
+                mileage_allowance,
+            )
+            # R405: night travel bonus
+            night_travel_bonus = 0
+            if emp.get("night_travel", False):
+                night_travel_bonus = lookup_tables.get("night_travel_bonus", 0)
+            # R404: hazard travel multiplier for transport allowance
+            hazard_travel_multiplier = lookup_tables.get(
+                "hazard_travel_multiplier", 1
             )
             # R101: night duty allowance
             night_hours = emp.get("night_hours", 0)
@@ -265,6 +288,7 @@ def main() -> None:
                 unit_map[u.get("id")] = u
             unit = unit_map.get(emp.get("unit"), {})
             barracks_provided = unit.get("barracks_provided", False)
+            hazard_zone = unit.get("hazard_zone", False)
             city = unit.get("location")
             if not barracks_provided and city:
                 housing_table = lookup_tables.get("housing_allowance_table", {})
@@ -291,6 +315,10 @@ def main() -> None:
                 special_meal_allowance = lookup_tables.get(
                     "special_meal_allowance", 0
                 )
+            if hazard_zone and hazard_travel_multiplier:
+                selected_transport_allowance *= hazard_travel_multiplier
+            if night_travel_bonus:
+                selected_transport_allowance += night_travel_bonus
             # R105: fatigue multiplier (applied to duty allowances)
             fatigue_cfg = lookup_tables.get("fatigue", {})
             streak_threshold = fatigue_cfg.get("streak_threshold", 0)
@@ -341,6 +369,8 @@ def main() -> None:
                 f"{fmt_amount(seniority_allowance)},"
                 f"{fmt_amount(acting_allowance)},"
                 f"{fmt_amount(commute_allowance)},"
+                f"{fmt_amount(transit_allowance)},"
+                f"{fmt_amount(mileage_allowance)},"
                 f"{fmt_amount(selected_housing_allowance)},"
                 f"{fmt_amount(selected_transport_allowance)},"
                 f"{fmt_amount(night_allowance)},"

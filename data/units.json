@@ -5,7 +5,8 @@
     "branch": "Army",
     "location": "Paris",
     "barracks_provided": true,
-    "meals_provided": false
+    "meals_provided": false,
+    "hazard_zone": true
   },
   {
     "id": "U002",
@@ -13,7 +14,8 @@
     "branch": "Army",
     "location": "Lyon",
     "barracks_provided": true,
-    "meals_provided": true
+    "meals_provided": true,
+    "hazard_zone": false
   },
   {
     "id": "U003",
@@ -21,7 +23,8 @@
     "branch": "Navy",
     "location": "Toulon",
     "barracks_provided": false,
-    "meals_provided": false
+    "meals_provided": false,
+    "hazard_zone": false
   },
   {
     "id": "U004",
@@ -29,7 +32,8 @@
     "branch": "Navy",
     "location": "Brest",
     "barracks_provided": false,
-    "meals_provided": false
+    "meals_provided": false,
+    "hazard_zone": false
   },
   {
     "id": "U005",
@@ -37,7 +41,8 @@
     "branch": "AirForce",
     "location": "Orleans",
     "barracks_provided": true,
-    "meals_provided": true
+    "meals_provided": true,
+    "hazard_zone": true
   },
   {
     "id": "U006",
@@ -45,7 +50,8 @@
     "branch": "AirForce",
     "location": "Bordeaux",
     "barracks_provided": true,
-    "meals_provided": false
+    "meals_provided": false,
+    "hazard_zone": false
   },
   {
     "id": "U007",
@@ -53,7 +59,8 @@
     "branch": "Army",
     "location": "Lille",
     "barracks_provided": false,
-    "meals_provided": true
+    "meals_provided": true,
+    "hazard_zone": true
   },
   {
     "id": "U008",
@@ -61,7 +68,8 @@
     "branch": "Army",
     "location": "Strasbourg",
     "barracks_provided": false,
-    "meals_provided": false
+    "meals_provided": false,
+    "hazard_zone": false
   },
   {
     "id": "U009",
@@ -69,7 +77,8 @@
     "branch": "Army",
     "location": "Metz",
     "barracks_provided": false,
-    "meals_provided": false
+    "meals_provided": false,
+    "hazard_zone": false
   },
   {
     "id": "U010",
@@ -77,7 +86,8 @@
     "branch": "Army",
     "location": "Grenoble",
     "barracks_provided": false,
-    "meals_provided": true
+    "meals_provided": true,
+    "hazard_zone": true
   },
   {
     "id": "U011",
@@ -85,7 +95,8 @@
     "branch": "Army",
     "location": "Marseille",
     "barracks_provided": false,
-    "meals_provided": false
+    "meals_provided": false,
+    "hazard_zone": true
   },
   {
     "id": "U012",
@@ -93,7 +104,8 @@
     "branch": "Army",
     "location": "Reims",
     "barracks_provided": false,
-    "meals_provided": true
+    "meals_provided": true,
+    "hazard_zone": false
   },
   {
     "id": "U013",
@@ -101,7 +113,8 @@
     "branch": "Army",
     "location": "Dijon",
     "barracks_provided": true,
-    "meals_provided": false
+    "meals_provided": false,
+    "hazard_zone": true
   },
   {
     "id": "U014",
@@ -109,7 +122,8 @@
     "branch": "Army",
     "location": "Amiens",
     "barracks_provided": true,
-    "meals_provided": false
+    "meals_provided": false,
+    "hazard_zone": false
   },
   {
     "id": "U015",
@@ -117,7 +131,8 @@
     "branch": "Navy",
     "location": "Nice",
     "barracks_provided": true,
-    "meals_provided": true
+    "meals_provided": true,
+    "hazard_zone": true
   },
   {
     "id": "U016",
@@ -125,7 +140,8 @@
     "branch": "Navy",
     "location": "Cherbourg",
     "barracks_provided": true,
-    "meals_provided": false
+    "meals_provided": false,
+    "hazard_zone": false
   },
   {
     "id": "U017",
@@ -133,7 +149,8 @@
     "branch": "Navy",
     "location": "Hyères",
     "barracks_provided": false,
-    "meals_provided": false
+    "meals_provided": false,
+    "hazard_zone": false
   },
   {
     "id": "U018",
@@ -141,7 +158,8 @@
     "branch": "Navy",
     "location": "La Rochelle",
     "barracks_provided": false,
-    "meals_provided": true
+    "meals_provided": true,
+    "hazard_zone": false
   },
   {
     "id": "U019",
@@ -149,7 +167,8 @@
     "branch": "Navy",
     "location": "Lorient",
     "barracks_provided": false,
-    "meals_provided": false
+    "meals_provided": false,
+    "hazard_zone": true
   },
   {
     "id": "U020",
@@ -157,7 +176,8 @@
     "branch": "Navy",
     "location": "Le Havre",
     "barracks_provided": false,
-    "meals_provided": true
+    "meals_provided": true,
+    "hazard_zone": true
   },
   {
     "id": "U021",
@@ -165,7 +185,8 @@
     "branch": "AirForce",
     "location": "Nancy",
     "barracks_provided": true,
-    "meals_provided": false
+    "meals_provided": false,
+    "hazard_zone": false
   },
   {
     "id": "U022",
@@ -173,7 +194,8 @@
     "branch": "AirForce",
     "location": "Tours",
     "barracks_provided": true,
-    "meals_provided": false
+    "meals_provided": false,
+    "hazard_zone": false
   },
   {
     "id": "U023",
@@ -181,7 +203,8 @@
     "branch": "AirForce",
     "location": "Rennes",
     "barracks_provided": false,
-    "meals_provided": false
+    "meals_provided": false,
+    "hazard_zone": true
   },
   {
     "id": "U024",
@@ -189,7 +212,8 @@
     "branch": "AirForce",
     "location": "Montpellier",
     "barracks_provided": true,
-    "meals_provided": false
+    "meals_provided": false,
+    "hazard_zone": false
   },
   {
     "id": "U025",
@@ -197,7 +221,8 @@
     "branch": "AirForce",
     "location": "Pau",
     "barracks_provided": false,
-    "meals_provided": true
+    "meals_provided": true,
+    "hazard_zone": true
   },
   {
     "id": "U026",
@@ -205,7 +230,8 @@
     "branch": "AirForce",
     "location": "Nimes",
     "barracks_provided": true,
-    "meals_provided": false
+    "meals_provided": false,
+    "hazard_zone": false
   },
   {
     "id": "U027",
@@ -213,7 +239,8 @@
     "branch": "Army",
     "location": "Perpignan",
     "barracks_provided": true,
-    "meals_provided": true
+    "meals_provided": true,
+    "hazard_zone": false
   },
   {
     "id": "U028",
@@ -221,7 +248,8 @@
     "branch": "Army",
     "location": "Caen",
     "barracks_provided": true,
-    "meals_provided": false
+    "meals_provided": false,
+    "hazard_zone": false
   },
   {
     "id": "U029",
@@ -229,7 +257,8 @@
     "branch": "Navy",
     "location": "Saint-Nazaire",
     "barracks_provided": true,
-    "meals_provided": false
+    "meals_provided": false,
+    "hazard_zone": false
   },
   {
     "id": "U030",
@@ -237,6 +266,7 @@
     "branch": "Navy",
     "location": "Calais",
     "barracks_provided": false,
-    "meals_provided": true
+    "meals_provided": true,
+    "hazard_zone": true
   }
 ]

@@ -1,0 +1,26 @@
+rule_id: R402
+name: 公務交通票價實報
+applies_to:
+  entity: employee
+  conditions:
+    - field: receipt_amount
+      operator: '>'
+      value: 0
+effect:
+  type: cap
+  target: transit_allowance
+  expression: min(receipt_amount, transit_cap)
+  parameters:
+    receipt_amount_field: receipt_amount
+    transit_cap_ref: lookup_table.transit_cap
+priority: 460
+example:
+  input:
+    employee:
+      id: E014
+      name: Emma Bonnet
+      receipt_amount: 620
+    lookup_table:
+      transit_cap: 500
+  output:
+    transit_allowance: 500

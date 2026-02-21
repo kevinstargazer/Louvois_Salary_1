@@ -1,0 +1,26 @@
+rule_id: R405
+name: 夜間交通加成
+applies_to:
+  entity: employee
+  conditions:
+    - field: night_travel
+      operator: '='
+      value: true
+effect:
+  type: add_bonus
+  target: transport_allowance
+  expression: transport_allowance + night_travel_bonus
+  parameters:
+    night_travel_bonus_ref: lookup_table.night_travel_bonus
+priority: 490
+example:
+  input:
+    employee:
+      id: E002
+      name: Marie Leclerc
+      night_travel: true
+    transport_allowance: 420
+    lookup_table:
+      night_travel_bonus: 150
+  output:
+    transport_allowance: 570

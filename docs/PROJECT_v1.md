@@ -1,4 +1,4 @@
-# 專案文件：Louvois Salary CLI
+# 專案文件：Louvois Salary v1
 
 本文件描述此專案的目標、範圍與文件結構。
 
@@ -17,11 +17,10 @@
 
 ## 文件結構
 
-- `docs/PROJECT.md`：本文件，描述專案總覽。
+- `docs/PROJECT_v1.md`：本文件，描述專案總覽。
 - `docs/基本資料配置指南.md`：基本資料的配置與格式建議。
-- `docs/基本資料規則.md`：基本資料的規則說明。
-- `docs/58種薪資規則.md`：薪資規則清單來源文件。
-- `docs/user_stories/`：使用者故事與規則拆分（共 58 條規則）。
+- `docs/58種薪資規則.md`：薪資規則清單來源文件。目前採用到 32 條規則，後續可以從中採納更多規則。
+- `docs/user_stories/`：使用者故事與規則拆分（共 32 條規則）。
 - `docs/domain_rules/`：Domain Rule Card（YAML 格式）。
 
 ## 專案資料
@@ -32,4 +31,5 @@
 - `data/employees.json`：人員資料（30 筆）。
 - `data/missions.json`：派遣任務資料（15 筆）。
 - `data/rules.json`：薪資規則（已建立第一筆 R001）。
+- `data/lookup_table.json`：對照表/參數表。
 - `main.py`：CLI 入口。

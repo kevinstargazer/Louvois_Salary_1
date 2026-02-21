@@ -1,0 +1,28 @@
+rule_id: R404
+name: 戰區交通危險係數
+applies_to:
+  entity: employee
+  conditions:
+    - field: hazard_zone
+      operator: '='
+      value: true
+effect:
+  type: multiplier
+  target: transport_allowance
+  expression: transport_allowance * hazard_travel_multiplier
+  parameters:
+    hazard_travel_multiplier_ref: lookup_table.hazard_travel_multiplier
+    hazard_zone_ref: units.hazard_zone
+priority: 480
+example:
+  input:
+    employee:
+      id: E009
+      name: Thomas Petit
+    unit:
+      hazard_zone: true
+    transport_allowance: 500
+    lookup_table:
+      hazard_travel_multiplier: 1.3
+  output:
+    transport_allowance: 650

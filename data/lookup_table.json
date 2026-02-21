@@ -193,5 +193,10 @@
       "max_km": 9999,
       "allowance": 700
     }
-  ]
+  ],
+  "transit_cap": 500,
+  "mileage_rate": 8,
+  "monthly_mileage_cap": 2000,
+  "hazard_travel_multiplier": 1.3,
+  "night_travel_bonus": 150
 }

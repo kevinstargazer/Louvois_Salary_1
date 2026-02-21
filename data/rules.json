@@ -663,9 +663,18 @@
     "id": "R402",
     "name": "公務交通票價實報",
     "category": "E. 交通與里程",
-    "priority": 100,
-    "conditions": {},
-    "computation": {},
+    "priority": 460,
+    "conditions": {
+      "receipt_amount_gt": 0
+    },
+    "computation": {
+      "type": "cap",
+      "formula": "min(receipt_amount, transit_cap)",
+      "inputs": {
+        "receipt_amount": "receipt_amount",
+        "transit_cap_ref": "lookup_table.transit_cap"
+      }
+    },
     "caps": null,
     "floors": null,
     "exclusive_group": null,
@@ -676,9 +685,19 @@
     "id": "R403",
     "name": "私車公用里程",
     "category": "E. 交通與里程",
-    "priority": 100,
-    "conditions": {},
-    "computation": {},
+    "priority": 470,
+    "conditions": {
+      "mileage_km_gt": 0
+    },
+    "computation": {
+      "type": "cap",
+      "formula": "min(mileage_km * mileage_rate, monthly_mileage_cap)",
+      "inputs": {
+        "mileage_km": "mileage_km",
+        "mileage_rate_ref": "lookup_table.mileage_rate",
+        "monthly_mileage_cap_ref": "lookup_table.monthly_mileage_cap"
+      }
+    },
     "caps": null,
     "floors": null,
     "exclusive_group": null,
@@ -689,9 +708,19 @@
     "id": "R404",
     "name": "戰區交通危險係數",
     "category": "E. 交通與里程",
-    "priority": 100,
-    "conditions": {},
-    "computation": {},
+    "priority": 480,
+    "conditions": {
+      "hazard_zone_is_true": true
+    },
+    "computation": {
+      "type": "multiplier",
+      "formula": "transport_allowance * hazard_travel_multiplier",
+      "inputs": {
+        "transport_allowance": "transport_allowance",
+        "hazard_travel_multiplier_ref": "lookup_table.hazard_travel_multiplier",
+        "hazard_zone_ref": "units.hazard_zone"
+      }
+    },
     "caps": null,
     "floors": null,
     "exclusive_group": null,
@@ -702,9 +731,18 @@
     "id": "R405",
     "name": "夜間交通加成",
     "category": "E. 交通與里程",
-    "priority": 100,
-    "conditions": {},
-    "computation": {},
+    "priority": 490,
+    "conditions": {
+      "night_travel_is_true": true
+    },
+    "computation": {
+      "type": "add_bonus",
+      "formula": "transport_allowance + night_travel_bonus",
+      "inputs": {
+        "transport_allowance": "transport_allowance",
+        "night_travel_bonus_ref": "lookup_table.night_travel_bonus"
+      }
+    },
     "caps": null,
     "floors": null,
     "exclusive_group": null,

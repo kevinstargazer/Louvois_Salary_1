@@ -1,0 +1,28 @@
+rule_id: R403
+name: 私車公用里程
+applies_to:
+  entity: employee
+  conditions:
+    - field: mileage_km
+      operator: '>'
+      value: 0
+effect:
+  type: cap
+  target: mileage_allowance
+  expression: min(mileage_km * mileage_rate, monthly_mileage_cap)
+  parameters:
+    mileage_km_field: mileage_km
+    mileage_rate_ref: lookup_table.mileage_rate
+    monthly_mileage_cap_ref: lookup_table.monthly_mileage_cap
+priority: 470
+example:
+  input:
+    employee:
+      id: E018
+      name: Manon Perrot
+      mileage_km: 260
+    lookup_table:
+      mileage_rate: 8
+      monthly_mileage_cap: 2000
+  output:
+    mileage_allowance: 2000

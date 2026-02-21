@@ -25,7 +25,10 @@
     "called_in": false,
     "training_days": 8,
     "special_meal_eligible": true,
-    "commute_km": 4
+    "commute_km": 4,
+    "receipt_amount": 120,
+    "mileage_km": 80,
+    "night_travel": true
   },
   {
     "id": "E002",
@@ -53,7 +56,10 @@
     "called_in": true,
     "training_days": 9,
     "special_meal_eligible": false,
-    "commute_km": 8
+    "commute_km": 8,
+    "receipt_amount": 170,
+    "mileage_km": 105,
+    "night_travel": false
   },
   {
     "id": "E003",
@@ -81,7 +87,10 @@
     "called_in": false,
     "training_days": 2,
     "special_meal_eligible": false,
-    "commute_km": 12
+    "commute_km": 12,
+    "receipt_amount": 220,
+    "mileage_km": 130,
+    "night_travel": true
   },
   {
     "id": "E004",
@@ -109,7 +118,10 @@
     "called_in": false,
     "training_days": 0,
     "special_meal_eligible": true,
-    "commute_km": 16
+    "commute_km": 16,
+    "receipt_amount": 270,
+    "mileage_km": 155,
+    "night_travel": false
   },
   {
     "id": "E005",
@@ -137,7 +149,10 @@
     "called_in": true,
     "training_days": 10,
     "special_meal_eligible": false,
-    "commute_km": 20
+    "commute_km": 20,
+    "receipt_amount": 320,
+    "mileage_km": 180,
+    "night_travel": true
   },
   {
     "id": "E006",
@@ -165,7 +180,10 @@
     "called_in": true,
     "training_days": 10,
     "special_meal_eligible": true,
-    "commute_km": 4
+    "commute_km": 4,
+    "receipt_amount": 120,
+    "mileage_km": 205,
+    "night_travel": false
   },
   {
     "id": "E007",
@@ -193,7 +211,10 @@
     "called_in": true,
     "training_days": 6,
     "special_meal_eligible": false,
-    "commute_km": 8
+    "commute_km": 8,
+    "receipt_amount": 170,
+    "mileage_km": 80,
+    "night_travel": true
   },
   {
     "id": "E008",
@@ -221,7 +242,10 @@
     "called_in": false,
     "training_days": 4,
     "special_meal_eligible": false,
-    "commute_km": 12
+    "commute_km": 12,
+    "receipt_amount": 220,
+    "mileage_km": 105,
+    "night_travel": false
   },
   {
     "id": "E009",
@@ -249,7 +273,10 @@
     "called_in": true,
     "training_days": 9,
     "special_meal_eligible": true,
-    "commute_km": 16
+    "commute_km": 16,
+    "receipt_amount": 270,
+    "mileage_km": 130,
+    "night_travel": true
   },
   {
     "id": "E010",
@@ -277,7 +304,10 @@
     "called_in": true,
     "training_days": 8,
     "special_meal_eligible": false,
-    "commute_km": 20
+    "commute_km": 20,
+    "receipt_amount": 320,
+    "mileage_km": 155,
+    "night_travel": false
   },
   {
     "id": "E011",
@@ -305,7 +335,10 @@
     "called_in": true,
     "training_days": 2,
     "special_meal_eligible": true,
-    "commute_km": 4
+    "commute_km": 4,
+    "receipt_amount": 120,
+    "mileage_km": 180,
+    "night_travel": false
   },
   {
     "id": "E012",
@@ -333,7 +366,10 @@
     "called_in": true,
     "training_days": 5,
     "special_meal_eligible": false,
-    "commute_km": 8
+    "commute_km": 8,
+    "receipt_amount": 170,
+    "mileage_km": 205,
+    "night_travel": false
   },
   {
     "id": "E013",
@@ -361,7 +397,10 @@
     "called_in": false,
     "training_days": 9,
     "special_meal_eligible": false,
-    "commute_km": 12
+    "commute_km": 12,
+    "receipt_amount": 220,
+    "mileage_km": 80,
+    "night_travel": true
   },
   {
     "id": "E014",
@@ -389,7 +428,10 @@
     "called_in": true,
     "training_days": 7,
     "special_meal_eligible": true,
-    "commute_km": 16
+    "commute_km": 16,
+    "receipt_amount": 270,
+    "mileage_km": 105,
+    "night_travel": false
   },
   {
     "id": "E015",
@@ -417,7 +459,10 @@
     "called_in": false,
     "training_days": 4,
     "special_meal_eligible": false,
-    "commute_km": 20
+    "commute_km": 20,
+    "receipt_amount": 320,
+    "mileage_km": 130,
+    "night_travel": true
   },
   {
     "id": "E016",
@@ -445,7 +490,10 @@
     "called_in": true,
     "training_days": 4,
     "special_meal_eligible": false,
-    "commute_km": 4
+    "commute_km": 4,
+    "receipt_amount": 120,
+    "mileage_km": 155,
+    "night_travel": false
   },
   {
     "id": "E017",
@@ -473,7 +521,10 @@
     "called_in": false,
     "training_days": 2,
     "special_meal_eligible": true,
-    "commute_km": 8
+    "commute_km": 8,
+    "receipt_amount": 170,
+    "mileage_km": 180,
+    "night_travel": true
   },
   {
     "id": "E018",
@@ -501,7 +552,10 @@
     "called_in": false,
     "training_days": 12,
     "special_meal_eligible": false,
-    "commute_km": 12
+    "commute_km": 12,
+    "receipt_amount": 220,
+    "mileage_km": 205,
+    "night_travel": false
   },
   {
     "id": "E019",
@@ -529,7 +583,10 @@
     "called_in": true,
     "training_days": 12,
     "special_meal_eligible": false,
-    "commute_km": 16
+    "commute_km": 16,
+    "receipt_amount": 270,
+    "mileage_km": 80,
+    "night_travel": true
   },
   {
     "id": "E020",
@@ -557,7 +614,10 @@
     "called_in": true,
     "training_days": 10,
     "special_meal_eligible": false,
-    "commute_km": 20
+    "commute_km": 20,
+    "receipt_amount": 320,
+    "mileage_km": 105,
+    "night_travel": false
   },
   {
     "id": "E021",
@@ -585,7 +645,10 @@
     "called_in": true,
     "training_days": 8,
     "special_meal_eligible": true,
-    "commute_km": 4
+    "commute_km": 4,
+    "receipt_amount": 120,
+    "mileage_km": 130,
+    "night_travel": true
   },
   {
     "id": "E022",
@@ -613,7 +676,10 @@
     "called_in": true,
     "training_days": 0,
     "special_meal_eligible": false,
-    "commute_km": 8
+    "commute_km": 8,
+    "receipt_amount": 170,
+    "mileage_km": 155,
+    "night_travel": false
   },
   {
     "id": "E023",
@@ -641,7 +707,10 @@
     "called_in": false,
     "training_days": 0,
     "special_meal_eligible": false,
-    "commute_km": 12
+    "commute_km": 12,
+    "receipt_amount": 220,
+    "mileage_km": 180,
+    "night_travel": true
   },
   {
     "id": "E024",
@@ -669,7 +738,10 @@
     "called_in": false,
     "training_days": 0,
     "special_meal_eligible": true,
-    "commute_km": 16
+    "commute_km": 16,
+    "receipt_amount": 270,
+    "mileage_km": 205,
+    "night_travel": false
   },
   {
     "id": "E025",
@@ -697,7 +769,10 @@
     "called_in": true,
     "training_days": 9,
     "special_meal_eligible": false,
-    "commute_km": 20
+    "commute_km": 20,
+    "receipt_amount": 320,
+    "mileage_km": 80,
+    "night_travel": true
   },
   {
     "id": "E026",
@@ -725,7 +800,10 @@
     "called_in": false,
     "training_days": 6,
     "special_meal_eligible": false,
-    "commute_km": 4
+    "commute_km": 4,
+    "receipt_amount": 120,
+    "mileage_km": 105,
+    "night_travel": false
   },
   {
     "id": "E027",
@@ -753,7 +831,10 @@
     "called_in": false,
     "training_days": 5,
     "special_meal_eligible": false,
-    "commute_km": 8
+    "commute_km": 8,
+    "receipt_amount": 170,
+    "mileage_km": 130,
+    "night_travel": true
   },
   {
     "id": "E028",
@@ -781,7 +862,10 @@
     "called_in": true,
     "training_days": 9,
     "special_meal_eligible": true,
-    "commute_km": 12
+    "commute_km": 12,
+    "receipt_amount": 220,
+    "mileage_km": 155,
+    "night_travel": false
   },
   {
     "id": "E029",
@@ -809,7 +893,10 @@
     "called_in": false,
     "training_days": 11,
     "special_meal_eligible": true,
-    "commute_km": 16
+    "commute_km": 16,
+    "receipt_amount": 270,
+    "mileage_km": 180,
+    "night_travel": true
   },
   {
     "id": "E030",
@@ -837,6 +924,9 @@
     "called_in": true,
     "training_days": 8,
     "special_meal_eligible": false,
-    "commute_km": 20
+    "commute_km": 20,
+    "receipt_amount": 320,
+    "mileage_km": 205,
+    "night_travel": false
   }
 ]
